@@ -1,0 +1,93 @@
+.inter-main-font{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #65DB7C;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.main-banner{
+    background-color: #D99DA6;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.main-banner h1{
+    font-weight: normal;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 20px;
+}
+
+.main-banner button{
+    background-color: #4EC965;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.promo{
+    background-color: #332225;
+}
+
+.promo h2{
+    color: white;
+}
+
+.promo p{
+    color: white;
+}
+
+.promo strong{
+    color: #D99DA6;
+}
+
+.why-us{
+    background-color: #ECECEC;
+}
+
+.feature img{
+    max-width: 20%;
+    max-height: 20%;
+}
