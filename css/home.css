@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .inter-main-font{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -6,81 +11,136 @@
     font-variation-settings: "slnt" 0;
 }
 
-body {
-    font-family: "Inter", sans-serif;
+/* html, body{
     margin: 0;
     padding: 0;
+} */
+
+body {
+    font-family: "Inter", sans-serif;
 }
 
 header {
-    background-color: #65DB7C;
+    background-color: #84C992;
 }
 
 .top-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.sidebar img{
+    display: flex;
+    margin-left: 5%;
 }
 
 .logo img {
     height: 50px;
 }
 
-.navigation {
-    display: flex;
+.navigations img{
+    
     gap: 20px;
+    right: 10%;
 }
 
-.navigation a {
-    color: red;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navigation a:hover {
+.navigations a:hover {
     text-decoration: underline;
 }
 
 .main-banner{
-    background-color: #D99DA6;
+    width: 100%;
     text-align: center;
-    padding: 50px 20px;
+    position: relative;
+    /* padding: 50px 20px; */
+    overflow: hidden;
 }
 
 .main-banner h1{
+    font-size: 3rem;
     font-weight: normal;
-    font-size: 2.5em;
+    left: 50%;
     line-height: 1.5em;
-    padding-bottom: 1em;
     margin-bottom: 20px;
+    padding-bottom: 1em;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transform: translate(-50%, -50%);
 }
 
 .main-banner button{
     background-color: #4EC965;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    font-size: 1em;
-    cursor: pointer;
     border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 5px 0px grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    left: 50%;
+    padding: 10px 25px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.start-now:hover{
+    background-color: #3FAB53;
 }
 
 .promo{
     background-color: #332225;
+    text-align: center;
 }
 
 .promo h2{
     color: white;
+    font-size: 3rem;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    padding-top: 2rem;
+    text-align: center;
 }
 
 .promo p{
     color: white;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 1em;
+    text-align: center;
 }
 
 .promo strong{
     color: #D99DA6;
+}
+
+.promo button{
+    background-color: #4EC965;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 3px 0px rgb(22, 22, 22);
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.try-now:hover{
+    background-color:#3FAB53;
 }
 
 .why-us{
@@ -88,6 +148,6 @@ header {
 }
 
 .feature img{
-    max-width: 20%;
-    max-height: 20%;
+    max-width: 20VW;
+    max-height: 20VH;
 }
