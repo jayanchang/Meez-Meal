@@ -151,3 +151,41 @@ header {
     max-width: 20VW;
     max-height: 20VH;
 }
+
+.footer-content{
+    background-color: #84C992;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    width: 100%;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: calc(100% / 3);
+    }
+}
+
+/* .about-us{
+    
+}
+
+.my-account{
+    text-align: left;
+}
+
+.contact-us{
+    text-align: left;
+    float: right;
+} */
+
+.copyright{
+    background-color: #332225;
+    color: white;
+    text-align: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
