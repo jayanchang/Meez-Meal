@@ -30,6 +30,10 @@ header {
     width: 100%;
 }
 
+#top-banner {
+    transition: margin-left .5s;
+}
+
 .sidebar img{
     padding-left: 2rem;
 }
