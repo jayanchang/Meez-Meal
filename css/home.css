@@ -15,6 +15,8 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+/* HEADER */
+
 header {
     background-color: #84C992;
 }
@@ -46,6 +48,8 @@ header {
 .navigations a:hover {
     text-decoration: underline;
 }
+
+/* MAIN BANNER */
 
 .main-banner{
     width: 100%;
@@ -94,6 +98,8 @@ header {
     background-color: #3FAB53;
 }
 
+/* PROMOTION BANNER */
+
 .promo{
     background-color: #332225;
     text-align: center;
@@ -101,7 +107,7 @@ header {
 
 .promo h2{
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.5em;
     margin-bottom: 20px;
     padding-top: 2rem;
@@ -138,14 +144,260 @@ header {
     background-color:#3FAB53;
 }
 
+/* WHY US? SECTION */
+
 .why-us{
     background-color: #ECECEC;
+    text-align: center;
+}
+
+.why-us h2{
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.feature{
+    text-align: center;
+    width: 22.5%;
+}
+
+.features:afer{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .feature img{
-    max-width: 20VW;
-    max-height: 20VH;
+    max-width: 35VW;
+    max-height: 35VH;
 }
+
+.feature h3{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.view-menu{
+    background-color: #4EC965;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 3px 0px grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 25px;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.view-menu:hover{
+    background-color: #3FAB53;
+}
+
+/* TOP MENU BANNER */
+
+.top-menu{
+    text-align: center;
+}
+
+.top-menu h2{
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.carousel-container{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    padding-right: 10%;
+}
+
+.carousel{
+    height: 30rem;
+    width: 60%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8rem;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-item{
+    width: 20%;
+    height: 100%;
+    flex: 1 0 auto;
+}
+
+.carousel img{
+    display: block;
+    object-fit: fill;
+}
+
+.view-more{
+    background-color: #4EC965;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 3px 0px grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 25px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.view-more:hover{
+    background-color: #3FAB53;
+}
+
+.top-menu p{
+    margin-bottom: 3rem;
+}
+
+/* RATING BANNER */
+
+.magic-of-meez{
+    background-color: #D9D9D9;
+    text-align: center;
+}
+
+.magic-of-meez h2{
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.magic-of-meez strong{
+    color: #D99DA6;
+}
+
+.meez-video{
+    text-align: right;
+}
+
+.awards{
+    display: table;
+    table-layout: fixed;
+    margin-top: 5rem;
+}
+
+.award{
+    display: table-cell;
+    padding-left: 1.25rem;
+    vertical-align: baseline;
+}
+
+.award img{
+    vertical-align: bottom;
+}
+
+.award p{
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.two-column > *{
+    float: left;
+    width: 50%;
+    margin-bottom: 6rem;
+}
+
+.two-column:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+@media (min-width:768px) {
+    .two-column > * {
+        width: 50%;
+    }
+}
+
+/* REVIEW BANNER */
+
+.reviews{
+    background-color: #D99DA6;
+    text-align: center;
+}
+
+.reviews h2{
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.review-flex{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
+.review{
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 6px 2px grey;
+    height: auto;
+    text-align: left;
+    margin: 1rem;
+}
+
+.review p{
+    padding: 2rem;
+}
+
+.order-now{
+    background-color: #4EC965;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 3px 0px grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 25px;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+.order-now:hover{
+    background-color: #3FAB53;
+}
+
+
 
 .footer-container{
     background-color: #84C992;
@@ -153,7 +405,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    max-width: 1500px;
+    /* max-width: 1500px; */
     padding: 0 20px;
 }
 
@@ -170,7 +422,7 @@ header {
 }
 
 .column p{
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 #Hotline{
