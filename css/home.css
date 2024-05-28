@@ -31,22 +31,17 @@ header {
 }
 
 .sidebar img{
-    display: flex;
-    margin-left: 5%;
+    padding-left: 2rem;
 }
 
 .logo img {
     height: 50px;
+    padding-left: 7rem;
 }
 
 .navigations img{
-    
-    gap: 20px;
+    padding-right: 2rem;
     right: 10%;
-}
-
-.navigations a:hover {
-    text-decoration: underline;
 }
 
 /* MAIN BANNER */
@@ -177,8 +172,8 @@ header {
 }
 
 .feature img{
-    max-width: 35VW;
-    max-height: 35VH;
+    max-width: 16rem;
+    max-height: 16rem;
 }
 
 .feature h3{
@@ -373,10 +368,25 @@ header {
     height: auto;
     text-align: left;
     margin: 1rem;
+    padding: 1rem;
+}
+
+.review-img-name{
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.review h3{
+    padding-left: 1rem;
+    padding-top: 0.6rem;
 }
 
 .review p{
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
 }
 
 .order-now{
@@ -397,7 +407,7 @@ header {
     background-color: #3FAB53;
 }
 
-
+/* FOOTER */
 
 .footer-container{
     background-color: #84C992;
