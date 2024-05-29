@@ -1,0 +1,149 @@
+Here is the formatted HTML code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="(max-width: 393px)" href="../css/results-mobile.css">
+    <link rel="stylesheet" media="(min-width: 394px)" href="../css/results-desktop.css">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <header>
+        <div class="left-logos">
+            <img class="logo" src="../image/Sidebar - Desktop.png" alt="header logo Sidebar" id="triggerSidePanel">
+        </div>
+        <img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo">
+        <div class="right-logos">
+            <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
+            <img src="../image/cart.png" alt="header logo cart">
+            <img src="../image/profile.png" alt="header logo profile">
+        </div>
+    </header>
+
+    <!--Search Result Container-->
+    <div class="search-result-container">
+        <h2 id="searchResultsTitle">Results for:</h2>
+        <img src="../image/Filter alt.png" alt="Filter Icon" id="filterIcon" style="cursor: pointer;">
+    </div>
+
+    <!-- Filter Sidebar -->
+    <div id="filterSidebar" class="sidebar" style="width: 0; visibility: hidden;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <h2 style="margin-bottom: 1vw;">Filter By</h2>
+        <div class="sidebar-div">
+            <input type="checkbox" id="recommended" name="filter" value="recommended">
+            <label for="recommended">Recommended</label>
+        </div>
+        <div class="sidebar-div">
+            <input type="checkbox" id="new" name="filter" value="new">
+            <label for="new">New Arrivals</label>
+        </div>
+        <div class="sidebar-div">
+            <input type="checkbox" id="popular" name="filter" value="popular">
+            <label for="popular">Most Popular</label>
+        </div>
+    </div>
+
+    <!--Owl in blank space-->
+    <div>
+        <img src="../image/owl i mage reverse.png" alt="owl image">
+        <img src="../image/owl peaking.png" alt="owl peaking">
+    </div>
+
+    <!--Search Result Images-->
+    <div class="search-result-image">
+        <img src="../image/risoni tag.png" alt="risoni with tag" class="meal" data-tags="recommended new">
+        <img src="../image/coconut curry tag.png" alt="coconut curry" class="meal" data-tags="popular">
+        <img src="../image/green curry tag.png" alt="green curry with tag" class="meal" data-tags="recommended">
+        <img src="../image/steak tag.png" alt="steak with tag" class="meal" data-tags="new">
+        <img src="../image/bulgogi tag.png" alt="bulgogi with tag" class="meal" data-tags="popular recommended">
+        <img src="../image/chicken taco tag.png" alt="taco with tag" class="meal" data-tags="new popular">
+    </div>
+
+    <div>
+        <h2>hi</h2>
+    </div>
+
+    <!--Search Function-->
+    <div id="searchPanel" style="visibility: hidden; z-index: 20;">
+        <div class="search-panel-white-container">
+            <form class="search-bar" action="../html pages/result.html" method="GET">
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <input style="padding: 4px;" id="search" type="text" name="q" placeholder="Search..." required>
+                    <button style="border: 0;" id="searchBtn" type="submit">
+                        <img src="../image/search.png" alt="Search" style="max-width: 4vw;">
+                    </button>
+                </div>
+                <!--Search History-->
+                <div class="search-history">
+                    <h3>Search History</h3>
+                </div>
+                <div class="search-history-content">
+                    <p>Curry Udon</p>
+                    <p>Margherita Pizza</p>
+                    <p>Green Curry</p>
+                    <p>Bibimbap</p>
+                    <p>Beef Bourguignon</p>
+                    <p>Quiche Lorraine</p>
+                    <p>Empanadas</p>
+                    <p>Beef Stroganoff</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Side Menu Panel-->
+    <div id="sidePanel">
+        <div id="sideMenu">
+            <div>
+                <p>Login</p>
+                <p>Menu</p>
+                <p>About Us</p>
+                <p>Contact</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/search-result.js"></script>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="column" id="about-us">
+            <h4>About Us</h4>
+            <br />
+            <p><a href="">Our Story</a></p>
+            <p><a href="">Meez Kitchen Blog</a></p>
+            <p><a href="">FAQ</a></p>
+        </div>
+        <div class="column" id="my-account">
+            <h4>My Account</h4>
+            <br />
+            <p><a href="cart.html">Orders</a></p>
+            <p><a href="">Ingredient Preferences</a></p>
+            <p><a href="">Delivery Preferences</a></p>
+        </div>
+        <div class="column" id="contact-us">
+            <h4>Contact Us</h4>
+            <br />
+            <p id="Hotline">Hotline: 773.916.6339<br />(Available 5pm-8pm CT Daily)</p>
+            <img src="../image/MeezMealsLogo-white-owl 1.png">
+            <div class="social-media">
+                <a href=""><img src="../image/facebook-icon.png" alt="Facebook"></a>
+                <a href=""><img src="../image/twitter-icon.png" alt="Twitter"></a>
+                <a href=""><img src="../image/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright"><b>&copy; Meez Meals 2024</b></p>
+</footer>
+
+</html>
+```
+
+
