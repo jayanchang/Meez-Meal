@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/cart3.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
@@ -35,43 +35,28 @@
                     </div>
                 </li>
                 <li>
-                    <div class="progress two">
+                    <div class="progress two" id="two">
                         <i class="uil uil-check"></i>
                     </div>
                 </li>
                 <li>
-                    <div class="progress three">
+                    <div class="progress three" id="three">
                         <i class="uil uil-check"></i>
                     </div>
                 </li>
             </ul>
         </div>
 
-        <section class="user-products">
-            <div class="summary">
-                <img src="../image/sweet tofu round.png" alt="product-image">
-                <div class="product-details">
-                    <h3 class="product-name">Sweet Tofu with Rice</h3>
-                    <p>$<a id="price">15.5</a></p>
-                </div>
-                <div class="product-count">
-                    <button id="countdown">-</button>
-                    <h4><a id="count">1</a></h4>
-                    <button id="countup"><a>+</a></button>
-                </div>
-            </div>
-        </section>
+        <img src="../image/checklogo.png" alt="check-logo" id="checklogo">
+        <div class="confirmation-text">
+            <h2>ORDER COMPLETED!</h2>
+            <p>The meal is on the way...</p>
+        </div>
 
-        <section class="total-and-meez">
-            <img src="../image/meez over line 1.png" alt="meez-peaking">
-            <div class="total-price">
-                <div class="price-text">
-                    <p>Total Price</p>
-                    <h3>$<a id="price">15.5</a></h3>
-                </div>
-                <a href="cart2.html" class="cart-continue"><b>CONTINUE</b></a>
-            </div>
-        </section>
+        <button id="see-more"><b>SEE MORE</b></button>
+
+        <img src="../image/meez-cart.png" alt="meez on cart" id="meez-cart">
+
     </main>
 
     <footer>
@@ -104,6 +89,6 @@
         </div>
         <p class="copyright"><b>&copy; Meez Meals 2024</b></p>
     </footer>
-    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/cart3.js"></script>
 </body>
 </html>

@@ -95,6 +95,22 @@ ul li .progress{
     background-color:#65DB7B;
 }
 
+#two {
+    background-color: #65DB7B;
+}
+
+#three {
+    background-color: #65DB7B;
+}
+
+.two.progress.two::after {
+    background-color: #65DB7B;
+}
+
+.three.progress.three::after {
+    background-color: #65DB7B;
+}
+
 .one::after{
     width: 0;
     height: 0;
@@ -104,128 +120,41 @@ ul li .progress .uil{
     display: none;
 }
 
-/* PRODUCT DETAILS */
+/* CONTENT */
 
-.user-products{
-    width:100%;
-    margin-bottom: 6rem;
-}
-
-.summary{
-    background-color: white;
-    border-radius: 2rem;
-    box-shadow: 0px 4px 6px 2px grey;
-    display: grid;
-    grid-template-columns: [picture] 25% [text] 55% [count] 20%;
-    height: auto;
-    margin-left: 22VW;
-    margin-top: 5rem;
-    max-width: 50%;
-    padding: 2.5rem;
-}
-
-.summary img{
-    grid-column-start: picture;
-    grid-column-end: text;
-    width: 10rem;
-    height: 10rem;
-    justify-self: center;
-}
-
-.product-details{
-    grid-column-start: text;
-    line-height: 3rem;
-    padding-left: 2rem;
-    font-size: 18px;
-}
-
-.product-count{
-    align-self: center;
-    text-align: center;
-}
-
-#countdown{
-    background: none;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    font-size: 2rem;
-}
-
-#countup{
-    background: #65DB7B;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font: inherit;
-    margin-top: 0.5rem;
-    outline: inherit;
-    overflow: hidden;
-    width: 25%;
-}
-
-#countup a{
+#checklogo{
     display: block;
-    float: center;
-    font-size: 32px;
-    line-height: 1em;
-    margin-top: -0.5em;
-    padding-bottom: 0.4rem;
-    padding-top: 1rem;
+    margin: 3rem auto;
+}
+
+.confirmation-text{
     text-align: center;
+    line-height: 2.5rem;
 }
 
-#countup:hover{
-    background-color: #3FAB53;
-}
-
-/* TOTAL PRICE */
-
-.total-and-meez img{
-    margin-left: 60%;
-}
-
-.total-price{
-    background-color: white;
-    border-radius: 2rem;
-    box-shadow: 0px 4px 6px 2px grey;
-    display: grid;
-    grid-template-columns: [edge-1] 5% [text] 25% [space] 45% [button] 20% [edge-2] 5%;
-    height: auto;
-    margin-left: 22VW;
-    margin-top: 0;
-    max-width: 50%;
-    padding: 2.5rem;
-    margin-bottom: 6rem;
-}
-
-.price-text{
-    grid-column-start: text;
-    grid-column-end: space;
-    text-align: center;
+.confirmation-text p{
     font-size: 18px;
-    line-height: 2rem;
 }
 
-.cart-continue{
-    grid-column-start: button;
-    grid-column-end: edge-2;
+#see-more{
     background-color: #4EC965;
     border-radius: 30px;
     border: none;
     box-shadow: 0px 4px 5px 0px grey;
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    display: block;
+    font-size: 16px;
+    margin: 2rem auto;
     padding: 10px 25px;
-    align-self: center;
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
+    width: auto;
 }
 
-.cart-continue:hover{
-    background-color: #3FAB53;
+#meez-cart{
+    display: block;
+    margin: 2rem auto;
 }
 
 /* FOOTER */

@@ -95,6 +95,14 @@ ul li .progress{
     background-color:#65DB7B;
 }
 
+#two {
+    background-color: #65DB7B;
+}
+
+.two.progress.two::after {
+    background-color: #65DB7B;
+}
+
 .one::after{
     width: 0;
     height: 0;
@@ -104,84 +112,91 @@ ul li .progress .uil{
     display: none;
 }
 
-/* PRODUCT DETAILS */
+/* PAYMENT METHODS */
 
-.user-products{
-    width:100%;
-    margin-bottom: 6rem;
+.payment-method{
+    margin-top: 5rem;
+    margin-left: 22%;
 }
 
-.summary{
+.payment-types{
     background-color: white;
     border-radius: 2rem;
-    box-shadow: 0px 4px 6px 2px grey;
+    box-shadow: 0px 4px 4px 0px grey;
     display: grid;
-    grid-template-columns: [picture] 25% [text] 55% [count] 20%;
-    height: auto;
-    margin-left: 22VW;
-    margin-top: 5rem;
-    max-width: 50%;
-    padding: 2.5rem;
+    grid-template-columns: [button] 8% [logo] 10% [space] 50% [text] 27% [edge-2] 5%;
+    margin-left: 22%;
+    max-width: 25%;
+    height: 2.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
-.summary img{
-    grid-column-start: picture;
-    grid-column-end: text;
-    width: 10rem;
-    height: 10rem;
-    justify-self: center;
-}
-
-.product-details{
-    grid-column-start: text;
-    line-height: 3rem;
-    padding-left: 2rem;
-    font-size: 18px;
-}
-
-.product-count{
+.radio-button{
+    margin-left: 0.5rem;
+    grid-column-start: button;
+    grid-column-end: logo;
+    width: 25px;
+    height: 25px;
     align-self: center;
-    text-align: center;
 }
 
-#countdown{
-    background: none;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    font-size: 2rem;
+#applepay-main img{
+    grid-column-start: logo;
+    grid-column-end: space;
+    width: 100%;
+    height: auto;
+    
 }
 
-#countup{
-    background: #65DB7B;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font: inherit;
-    margin-top: 0.5rem;
-    outline: inherit;
-    overflow: hidden;
-    width: 25%;
+.payment-types img{
+    margin-left: 0.5rem;
+    grid-column-start: logo;
+    grid-column-end: space;
+    align-self: center;
 }
 
-#countup a{
-    display: block;
-    float: center;
-    font-size: 32px;
-    line-height: 1em;
-    margin-top: -0.5em;
-    padding-bottom: 0.4rem;
-    padding-top: 1rem;
-    text-align: center;
+.payment-types h3{
+    grid-column-start: text;
+    grid-column-end: edge-2;
+    justify-self: end;
+    align-self: center;
 }
 
-#countup:hover{
-    background-color: #3FAB53;
+/* SELECT ADDRESS */
+
+.address-text{
+    margin-top: 5rem;
+    margin-left: 22%;
+}
+
+.address{
+    background-color: white;
+    border-radius: 2rem;
+    border: 2px solid white;
+    box-shadow: 0px 4px 4px 0px grey;
+    margin-left: 22%;
+    max-width: 25%;
+    height: auto;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+#edit{
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: small;
 }
 
 /* TOTAL PRICE */
-.total-price{
+
+.total-and-meez img{
+    margin-left: 60%;
+}
+
+.selected-method{
     background-color: white;
     border-radius: 2rem;
     box-shadow: 0px 4px 6px 2px grey;
@@ -189,13 +204,12 @@ ul li .progress .uil{
     grid-template-columns: [edge-1] 5% [text] 25% [space] 45% [button] 20% [edge-2] 5%;
     height: auto;
     margin-left: 22VW;
-    margin-top: 5rem;
     max-width: 50%;
     padding: 2.5rem;
     margin-bottom: 6rem;
 }
 
-.price-text{
+.method-text{
     grid-column-start: text;
     grid-column-end: space;
     text-align: center;
@@ -215,10 +229,98 @@ ul li .progress .uil{
     font-size: 18px;
     padding: 10px 25px;
     align-self: center;
+    text-decoration: none;
+    text-align: center;
 }
 
 .cart-continue:hover{
     background-color: #3FAB53;
+}
+
+/* CONFIRMATION */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}  
+
+.modal-content{
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #84C992;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.grid-content{
+    display: grid;
+    grid-template-columns: [text] 70% [cost] 30%;
+}
+
+#product-name{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    grid-column-start: text;
+}
+
+#cost{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    grid-column-start: cost;
+    justify-self: end;
+}
+
+#total{
+    margin-bottom: 2rem;
+    grid-column-start: text;
+}
+
+#total-cost{
+    margin-bottom: 2rem;
+    grid-column-start: cost;
+    justify-self: end;
+}
+
+#order-button{
+    background-color: #4EC965;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 5px 0px grey;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    margin: 0.5rem auto;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    width: 45%;
+}
+
+.close{
+    color: #A8A8A8;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    grid-column-start: cost;
+    justify-self: end;
+}
+
+.close:hover,
+.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* FOOTER */

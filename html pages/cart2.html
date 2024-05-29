@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/cart2.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
@@ -35,7 +35,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="progress two">
+                    <div class="progress two" id="two">
                         <i class="uil uil-check"></i>
                     </div>
                 </li>
@@ -47,30 +47,63 @@
             </ul>
         </div>
 
-        <section class="user-products">
-            <div class="summary">
-                <img src="../image/sweet tofu round.png" alt="product-image">
-                <div class="product-details">
-                    <h3 class="product-name">Sweet Tofu with Rice</h3>
-                    <p>$<a id="price">15.5</a></p>
-                </div>
-                <div class="product-count">
-                    <button id="countdown">-</button>
-                    <h4><a id="count">1</a></h4>
-                    <button id="countup"><a>+</a></button>
-                </div>
+        <section>
+            <h2 class="payment-method">Payment Method</h2>
+            <div class="payment-types">
+                <input type="radio" class="radio-button" name="pay-type" onclick="changeMethod('PayPal')">
+                <img src="../image/paypal.png" alt="paypal logo">
+                <h3>PayPal</h3>
+            </div>
+            <div class="payment-types">
+                <input type="radio" class="radio-button" name="pay-type" onclick="changeMethod('Mastercard')">
+                <img src="../image/mastercard.png" alt="mastercard logo">
+                <h3>Mastercard</h3>
+            </div>
+            <div class="payment-types">
+                <input type="radio" class="radio-button" name="pay-type" onclick="changeMethod('VISA')">
+                <img src="../image/visa.png" alt="visa logo">
+                <h3>VISA</h3>
+            </div>
+            <div class="payment-types" id="applepay-main">
+                <input type="radio" class="radio-button" name="pay-type" onclick="changeMethod('Apple Pay')">
+                <img src="../image/applepay.jpg" alt="applepay logo">
+                <h3>Apple Pay</h3>
+            </div>
+            
+            <h2 class="address-text">Select Address</h2>
+            <div class="address" id="addressBorder1" onclick="addressBorder1()">
+                <p>562 Swanston St, Carlton VIC 3053, Australia</p>
+                <p id="edit">EDIT</p>
+            </div>
+            <div class="address" id="addressBorder2" onclick="addressBorder2()">
+                <p>227 Elizabeth St, Melb VIC 3000, Australia</p>
+                <p id="edit">EDIT</p>
             </div>
         </section>
 
-        <section>
-            <div class="total-price">
-                <div class="price-text">
-                    <p>Total Price</p>
-                    <h3>$<a id="price">15.5</a></h3>
+        <section class="total-and-meez">
+            <img src="../image/meez over line 1.png" alt="meez-peaking">
+            <div class="selected-method">
+                <div class="method-text">
+                    <p>Selected Method</p>
+                    <h3><a id="method">None Selected</a></h3>
                 </div>
-                <button class="cart-continue"><b>CONTINUE</b></button>
+                <button class="cart-continue" id="myBtn"><b>CONTINUE</b></button>
             </div>
         </section>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="grid-content">
+                    <span class="close">&times;</span>
+                    <p id="product-name">Sweet Tofu with Rice</p>
+                    <p id="cost">$15.5</p>
+                    <p id="total"><b>TOTAL</b></p>
+                    <p id="total-cost"><b>$15.5</b></p>
+                </div>
+                <a href="cart3.html" id="order-button"><b>PLACE ORDER</b></a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -103,6 +136,6 @@
         </div>
         <p class="copyright"><b>&copy; Meez Meals 2024</b></p>
     </footer>
-    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/cart2.js"></script>
 </body>
 </html>
