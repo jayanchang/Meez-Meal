@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/confirmation.css">
+    <link rel="stylesheet" media="(max-width: 391px)" href="../css/confirmation-mobile.css">
+    <link rel="stylesheet" media="(min-width: 391px)" href="../css/confirmation.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
     <title>Meez Meal Home Page</title>
 </head>
 <body>
     <header>
-        <nav id="top-banner" class="top-banner">
-            <div class="sidebar">
-                <a href="#"><img src="../image/Sidebar - Desktop.png" alt="navbar"></a>
-            </div>
-            <div class="logo">
-                <a href="home.html"><img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="header logo"></a>
-            </div>
-            <div class="navigations">
-                <a href="#"><img src="../image/search.png" alt="Search"></a>
-                <a href="#"><img src="../image/cart.png" alt="Cart"></a>
-                <a href="#"><img src="../image/profile.png" alt="Profile"></a>
-            </div>
-        </nav>     
+        <div class="left-logos">
+            <img class="logo" src="../image/Sidebar - Desktop.png" id="triggerSidePanel" alt="header logo Sidebar">
+        </div>
+        <a href="#"><img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo"></a>
+        <div class="right-logos">
+            <!-- Search Icon -->
+            <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
+            <img src="../image/cart.png" alt="header logo cart">
+            <img src="../image/profile.png" alt="header logo profile">
+        </div>
     </header>
 
     <main>

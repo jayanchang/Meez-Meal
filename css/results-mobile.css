@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-body, button {
+body,
+button {
     font-family: "Inter", sans-serif;
 }
 
@@ -353,34 +354,34 @@ input[type="checkbox"] {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  
-  .column {
+}
+
+.column {
     margin: 10px 0;
-  }
-  
-  .column h3{
+}
+
+.column h3 {
     margin-bottom: 10px;
     line-height: 2rem;
-  }
-  
-  .column p{
+}
+
+.column p {
     line-height: 2rem;
-  }
-  
-  .social-media {
+}
+
+.social-media {
     justify-content: center;
-  }
-  
-  
-  .copyright {
+}
+
+
+.copyright {
     background-color: #332225;
     color: white;
     text-align: center;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-  }
-  
-  #Hotline{
+}
+
+#Hotline {
     line-height: normal;
-  }
+}

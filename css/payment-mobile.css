@@ -9,38 +9,40 @@ body {
 }
 
 /* HEADER */
-
 header {
     background-color: #84C992;
+    box-shadow: 0px 8px 5px 0px grey;
     height: 3.875rem;
     display: flex;
     justify-content: space-between;
-}
-
-.menu-h1 {
-    font-size: 32px;
-    margin-left: 10vw;
+    align-items: center;
 }
 
 .logo {
     text-align: center;
-    margin-left: 30%;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 15vw;
 }
 
 .right-logos {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .right-logos img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 15%;
+    max-height: 30%;
     margin: 1vw;
+
 }
 
 .left-logos {
     display: flex;
     align-items: center;
+    margin-left: 3vw;
+
 }
 
 .left-logos img {
@@ -71,11 +73,11 @@ ul li {
 }
 
 ul li .progress {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #A8A8A8;
-    margin: 12px 52px;
+    margin: 12px 40px;
     display: grid;
     place-items: center;
     color: #fff;
@@ -86,21 +88,13 @@ ul li .progress {
 .progress::after {
     content: " ";
     position: absolute;
-    width: 105px;
-    height: 2.5px;
+    width: 80px;
+    height: 2px;
     background-color: #A8A8A8;
-    right: 30px;
+    right: 20px;
 }
 
 #one {
-    background-color: #65DB7B;
-}
-
-#two {
-    background-color: #65DB7B;
-}
-
-.two.progress.two::after {
     background-color: #65DB7B;
 }
 
@@ -117,21 +111,22 @@ ul li .progress .uil {
 
 .payment-method {
     margin-top: 5rem;
-    margin-left: 22%;
+    margin-left: 5%;
+    font-size: 16px;
 }
 
 .payment-types {
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1rem;
     box-shadow: 0px 4px 4px 0px grey;
     display: grid;
-    grid-template-columns: [button] 8% [logo] 10% [space] 50% [text] 27% [edge-2] 5%;
-    margin-left: 22%;
-    max-width: 25%;
+    grid-template-columns: [button] 8% [logo] 15% [space] 40% [text] 32% [edge-2] 5%;
+    margin-left: 5%;
+    max-width: 80%;
     height: 2.5rem;
     padding: 1rem;
-    margin-bottom: 1.5rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .radio-button {
@@ -152,7 +147,7 @@ ul li .progress .uil {
 }
 
 .payment-types img {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     grid-column-start: logo;
     grid-column-end: space;
     align-self: center;
@@ -163,13 +158,15 @@ ul li .progress .uil {
     grid-column-end: edge-2;
     justify-self: end;
     align-self: center;
+    font-size: 16px;
 }
 
 /* SELECT ADDRESS */
 
 .address-text {
-    margin-top: 5rem;
-    margin-left: 22%;
+    margin-top: 3rem;
+    margin-left: 5%;
+    font-size: 16px;
 }
 
 .address {
@@ -177,11 +174,11 @@ ul li .progress .uil {
     border-radius: 2rem;
     border: 2px solid white;
     box-shadow: 0px 4px 4px 0px grey;
-    margin-left: 22%;
-    max-width: 25%;
+    margin-left: 5%;
+    max-width: 75%;
     height: auto;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
@@ -194,7 +191,8 @@ ul li .progress .uil {
 /* TOTAL PRICE */
 
 .total-and-meez img {
-    margin-left: 60%;
+    margin-top: 2rem;
+    margin-left: 50%;
 }
 
 .selected-method {
@@ -202,11 +200,11 @@ ul li .progress .uil {
     border-radius: 2rem;
     box-shadow: 0px 4px 6px 2px grey;
     display: grid;
-    grid-template-columns: [edge-1] 5% [text] 25% [space] 45% [button] 20% [edge-2] 5%;
+    grid-template-columns: [text] 40% [space] 20% [button] 40%;
     height: auto;
-    margin-left: 22VW;
-    max-width: 50%;
-    padding: 2.5rem;
+    margin-left: 5%;
+    max-width: 75%;
+    padding: 1.5rem;
     margin-bottom: 6rem;
 }
 
@@ -214,24 +212,24 @@ ul li .progress .uil {
     grid-column-start: text;
     grid-column-end: space;
     text-align: center;
-    font-size: 18px;
-    line-height: 2rem;
+    font-size: 14px;
+    line-height: 1.5rem;
 }
 
 .cart-continue {
     grid-column-start: button;
-    grid-column-end: edge-2;
     background-color: #4EC965;
     border-radius: 30px;
     border: none;
     box-shadow: 0px 4px 5px 0px grey;
     color: white;
     cursor: pointer;
-    font-size: 18px;
-    padding: 10px 25px;
+    font-size: 14px;
+    padding: 10px 20px;
     align-self: center;
     text-decoration: none;
     text-align: center;
+    justify-self: center;
 }
 
 .cart-continue:hover {
@@ -242,11 +240,8 @@ ul li .progress .uil {
 
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
     /* Location of the box */
     left: 0;
@@ -256,11 +251,8 @@ ul li .progress .uil {
     height: 100%;
     /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
 .modal-content {
@@ -269,7 +261,7 @@ ul li .progress .uil {
     padding: 20px;
     border: 3px solid #84C992;
     border-radius: 10px;
-    width: 20%;
+    width: 70%;
 }
 
 .grid-content {

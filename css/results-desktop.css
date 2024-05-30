@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-body, button {
+body,
+button {
   font-family: "Inter", sans-serif;
 }
 
@@ -72,7 +73,7 @@ body {
   padding-bottom: 1vw;
 }
 
-.search-result-container img{
+.search-result-container img {
   max-width: 5vw;
   max-height: auto;
 }
@@ -157,7 +158,7 @@ body {
   padding: 2vw;
 }
 
-.sidebar-div{
+.sidebar-div {
   margin-bottom: 1vw;
 }
 
@@ -338,7 +339,7 @@ img[src="../image/owl peaking.png"] {
 
 /* FOOTER */
 
-.footer-container{
+.footer-container {
   background-color: #84C992;
   display: flex;
   flex-wrap: wrap;
@@ -347,29 +348,29 @@ img[src="../image/owl peaking.png"] {
   padding: 0 20px;
 }
 
-.column{
+.column {
   flex: 1;
   margin: 0.5rem;
   min-width: 200px;
   padding: 1rem;
 }
 
-.column h3{
+.column h3 {
   margin-bottom: 10px;
   line-height: 2rem;
 }
 
-.column p{
+.column p {
   line-height: 2rem;
 }
 
-#Hotline{
+#Hotline {
   line-height: normal;
 }
 
-.social-media{
+.social-media {
   padding-top: 1rem;
-  display: flex;  
+  display: flex;
   gap: 1rem;
   justify-content: left;
 }

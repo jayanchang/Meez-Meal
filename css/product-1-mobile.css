@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-body, button {
+body,
+button {
   font-family: "Inter", sans-serif;
 }
 
@@ -512,19 +513,22 @@ img[src="../image/owl peaking.png"] {
   margin: 0vw;
 }
 
-img[src="../image/owl i mage reverse.png"]{
+img[src="../image/owl i mage reverse.png"] {
   position: absolute;
-  bottom: 0; /* Adjust as necessary */
+  bottom: 0;
+  /* Adjust as necessary */
   top: 59.7vw;
-  right: 0; /* Adjust as necessary */
-  width: 14vw; /* Adjust size as needed */
+  right: 0;
+  /* Adjust as necessary */
+  width: 14vw;
+  /* Adjust size as needed */
   height: auto;
   margin: 0vw;
 }
 
 /* FOOTER */
 
-.footer-container{
+.footer-container {
   background-color: #84C992;
   display: flex;
   flex-wrap: wrap;
@@ -533,55 +537,55 @@ img[src="../image/owl i mage reverse.png"]{
   padding: 0 20px;
 }
 
-.column{
+.column {
   flex: 1;
   margin: 0.5rem;
   min-width: 200px;
   padding: 1rem;
 }
 
-.column h3{
+.column h3 {
   margin-bottom: 10px;
   line-height: 2rem;
 }
 
-.column p{
+.column p {
   line-height: 2rem;
 }
 
-.column a{
+.column a {
   text-decoration: none;
   color: black;
 }
 
-#Hotline{
+#Hotline {
   line-height: normal;
 }
 
-.social-media{
+.social-media {
   padding-top: 1rem;
-  display: flex;  
+  display: flex;
   gap: 1rem;
   justify-content: left;
 }
 
 @media screen and (max-width: 768px) {
-  .footer-container{
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  
+
   .column {
     margin: 10px 0;
   }
 
-  .social-media{
-      justify-content: center;
+  .social-media {
+    justify-content: center;
   }
-}   
+}
 
-.copyright{
+.copyright {
   background-color: #332225;
   color: white;
   text-align: center;

@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-body, button {
+body,
+button {
     font-family: "Inter", sans-serif;
 }
 
@@ -448,7 +449,7 @@ header {
     line-height: 2rem;
 }
 
-.column a{
+.column a {
     text-decoration: none;
     color: black;
 }

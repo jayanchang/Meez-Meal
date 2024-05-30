@@ -12,35 +12,38 @@ body {
 
 header {
     background-color: #84C992;
+    box-shadow: 0px 8px 5px 0px grey;
     height: 3.875rem;
     display: flex;
     justify-content: space-between;
-}
-
-.menu-h1 {
-    font-size: 32px;
-    margin-left: 10vw;
+    align-items: center;
 }
 
 .logo {
     text-align: center;
-    margin-left: 30%;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 15vw;
 }
 
 .right-logos {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .right-logos img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 15%;
+    max-height: 30%;
     margin: 1vw;
+
 }
 
 .left-logos {
     display: flex;
     align-items: center;
+    margin-left: 3vw;
+
 }
 
 .left-logos img {
@@ -71,11 +74,11 @@ ul li {
 }
 
 ul li .progress {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #A8A8A8;
-    margin: 12px 52px;
+    margin: 12px 40px;
     display: grid;
     place-items: center;
     color: #fff;
@@ -86,10 +89,10 @@ ul li .progress {
 .progress::after {
     content: " ";
     position: absolute;
-    width: 105px;
-    height: 2.5px;
+    width: 80px;
+    height: 2px;
     background-color: #A8A8A8;
-    right: 30px;
+    right: 20px;
 }
 
 #one {
@@ -119,25 +122,29 @@ ul li .progress .uil {
     display: grid;
     grid-template-columns: [picture] 25% [text] 55% [count] 20%;
     height: auto;
-    margin-left: 22VW;
+    margin-left: 5VW;
     margin-top: 5rem;
-    max-width: 50%;
-    padding: 2.5rem;
+    max-width: 70%;
+    padding: 1.5rem 2.5rem;
 }
 
 .summary img {
     grid-column-start: picture;
     grid-column-end: text;
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     justify-self: center;
 }
 
 .product-details {
     grid-column-start: text;
-    line-height: 3rem;
+    line-height: 1.5rem;
     padding-left: 2rem;
-    font-size: 18px;
+    font-size: 14px;
+}
+
+.product-details p {
+    padding-top: 1rem;
 }
 
 .product-count {
@@ -163,14 +170,14 @@ ul li .progress .uil {
     margin-top: 0.5rem;
     outline: inherit;
     overflow: hidden;
-    width: 25%;
+    width: 50%;
 }
 
 #countup a {
     display: block;
     float: center;
-    font-size: 32px;
-    line-height: 1em;
+    font-size: 28px;
+    line-height: 0.75em;
     margin-top: -0.5em;
     padding-bottom: 0.4rem;
     padding-top: 1rem;
@@ -184,7 +191,7 @@ ul li .progress .uil {
 /* TOTAL PRICE */
 
 .total-and-meez img {
-    margin-left: 60%;
+    margin-left: 50%;
 }
 
 .total-price {
@@ -192,12 +199,12 @@ ul li .progress .uil {
     border-radius: 2rem;
     box-shadow: 0px 4px 6px 2px grey;
     display: grid;
-    grid-template-columns: [edge-1] 5% [text] 25% [space] 45% [button] 20% [edge-2] 5%;
+    grid-template-columns: [text] 30% [space] 30% [button] 40%;
     height: auto;
-    margin-left: 22VW;
+    margin-left: 5VW;
     margin-top: 0;
-    max-width: 50%;
-    padding: 2.5rem;
+    max-width: 70%;
+    padding: 1rem 2.5rem;
     margin-bottom: 6rem;
 }
 
@@ -205,24 +212,24 @@ ul li .progress .uil {
     grid-column-start: text;
     grid-column-end: space;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 2rem;
 }
 
 .cart-continue {
     grid-column-start: button;
-    grid-column-end: edge-2;
     background-color: #4EC965;
     border-radius: 30px;
     border: none;
     box-shadow: 0px 4px 5px 0px grey;
     color: white;
     cursor: pointer;
-    font-size: 18px;
-    padding: 10px 25px;
+    font-size: 14px;
+    padding: 10px 20px;
     align-self: center;
     text-decoration: none;
     text-align: center;
+    justify-self: center;
 }
 
 .cart-continue:hover {
@@ -237,7 +244,6 @@ ul li .progress .uil {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    /* max-width: 1500px; */
     padding: 0 20px;
 }
 
