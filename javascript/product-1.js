@@ -1,72 +1,80 @@
+// DOM Elements for the accordion sections
+const firstB = document.getElementById("firstB");
+const firstD = document.getElementById("firstD");
+const secondB = document.getElementById("secondB");
+const secondD = document.getElementById("secondD");
+
+// Event listeners for accordion buttons
+firstB.addEventListener("click", () => {
+    toggleAccordion(firstD, firstB);
+});
+
+secondB.addEventListener("click", () => {
+    toggleAccordion(secondD, secondB);
+});
+
+// Function to toggle accordion visibility and button text
+function toggleAccordion(content, button) {
+    if (content.classList.contains("less")) {
+        content.classList.remove("less");
+        button.innerText = "Read less 🔼";
+    } else {
+        content.classList.add("less");
+        button.innerText = "Read more 🔽";
+    }
+}
+
+// Slideshow control variables
 let slideIndex = 0;
 let slides = document.getElementsByClassName("slide");
 
+// Function to cycle through slides automatically
 function showSlides() {
-    // Log the current status
-    console.log("Showing slides, current index: ", slideIndex);
-
-    // Mark all slides as inactive
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove('active');
         slides[i].classList.add('inactive');
-        console.log("Slide " + i + " set to inactive");
     }
-
-    // Increment slide index or reset if at the end
     slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    // Activate the new slide
-    console.log("New slide index: ", slideIndex);
+    if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].classList.add('active');
     slides[slideIndex - 1].classList.remove('inactive');
-    console.log("Slide " + (slideIndex - 1) + " set to active");
-
-    // Set a timeout to automatically cycle slides
-    setTimeout(showSlides, 3000);
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
+// Function to change slide manually
 function changeSlide(n) {
-    // Adjust current slide before changing
     slides[slideIndex - 1].classList.remove('active');
     slides[slideIndex - 1].classList.add('inactive');
-
-    // Calculate new slide index
     slideIndex += n;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    }
-
-    // Activate new slide
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
     slides[slideIndex - 1].classList.add('active');
     slides[slideIndex - 1].classList.remove('inactive');
 }
 
-// Initialize first slide and start the slideshow
+// Initialization on DOM content loaded
 document.addEventListener("DOMContentLoaded", function() {
     slides[0].classList.add('active'); // Ensure the first slide is visible initially
     setTimeout(showSlides, 3000); // Start the slideshow
 });
 
-// Functions for the search functionality
-function openSearch() {
-    document.getElementById('searchOverlay').style.display = 'flex'; // Use 'flex' to center content
+// Debugging version of showSlides function for console feedback
+function debugShowSlides() {
+    console.log("Showing slides, current index: ", slideIndex);
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+        slides[i].classList.add('inactive');
+        console.log("Slide " + i + " set to inactive");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    console.log("New slide index: ", slideIndex);
+    slides[slideIndex - 1].classList.add('active');
+    slides[slideIndex - 1].classList.remove('inactive');
+    console.log("Slide " + (slideIndex - 1) + " set to active");
+    setTimeout(debugShowSlides, 3000);
 }
 
-function closeSearch() {
-    document.getElementById('searchOverlay').style.display = 'none';
-}
-
-function performSearch() {
-    const searchTerm = document.getElementById('searchInput').value;
-    console.log("Searching for:", searchTerm);
-    // Implement your search functionality here
-}
 
 // Event listeners for search-related functionality
 document.getElementById("search").addEventListener("keyup", function(event) {
@@ -93,7 +101,6 @@ document.getElementById("searchPanel").addEventListener("click", function(e) {
 });
 
 
-
 //Side Menu Panel Function
 document.getElementById("triggerSidePanel").addEventListener("click", function () {
     document.getElementById("sidePanel").style.visibility = "visible";
@@ -106,6 +113,7 @@ document.getElementById("sidePanel").addEventListener("click", function (e) {
         document.getElementById("sideMenu").style.marginLeft = "-20%";
     }
 });
+
 
 
 
