@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-.inter-main-font{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
-}
-
 body {
     font-family: "Inter", sans-serif;
 }
@@ -349,6 +341,11 @@ ul li .progress .uil{
 
 .column p{
     line-height: 2rem;
+}
+
+.column a{
+    text-decoration: none;
+    color: black;
 }
 
 #Hotline{

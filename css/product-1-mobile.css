@@ -3,6 +3,9 @@
   padding: 0;
 }
 
+body, button {
+  font-family: "Inter", sans-serif;
+}
 
 header {
   background-color: #84C992;
@@ -274,7 +277,6 @@ button.order-now-btn:hover {
 }
 
 .for-children-div {
-  margin-bottom: 5vw;
   background-color: #D99DA6;
   padding-top: 4vw;
   padding-bottom: 4vw;
@@ -520,14 +522,22 @@ img[src="../image/owl i mage reverse.png"]{
   margin: 0vw;
 }
 
-.footer-container {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+/* FOOTER */
+
+.footer-container{
+  background-color: #84C992;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.column {
-  margin: 10px 0;
+.column{
+  flex: 1;
+  margin: 0.5rem;
+  min-width: 200px;
+  padding: 1rem;
 }
 
 .column h3{
@@ -539,19 +549,42 @@ img[src="../image/owl i mage reverse.png"]{
   line-height: 2rem;
 }
 
-.social-media {
-  justify-content: center;
+.column a{
+  text-decoration: none;
+  color: black;
 }
 
+#Hotline{
+  line-height: normal;
+}
 
-.copyright {
+.social-media{
+  padding-top: 1rem;
+  display: flex;  
+  gap: 1rem;
+  justify-content: left;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .column {
+    margin: 10px 0;
+  }
+
+  .social-media{
+      justify-content: center;
+  }
+}   
+
+.copyright{
   background-color: #332225;
   color: white;
   text-align: center;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-#Hotline{
-  line-height: normal;
 }

@@ -3,6 +3,9 @@
   padding: 0;
 }
 
+body, button {
+  font-family: "Inter", sans-serif;
+}
 
 header {
   background-color: #84C992;
@@ -14,7 +17,6 @@ header {
 .menu-h1 {
   font-size: 32px;
   margin-left: 10vw;
-  fv
 }
 
 .logo {
@@ -594,9 +596,9 @@ body {
 }
 
 
-/*Footer */
+/* FOOTER */
 
-.footer-container{
+.footer-container {
   background-color: #84C992;
   display: flex;
   flex-wrap: wrap;
@@ -605,25 +607,58 @@ body {
   padding: 0 20px;
 }
 
-.column{
+.column {
   flex: 1;
   margin: 0.5rem;
   min-width: 200px;
   padding: 1rem;
 }
 
-.column h3{
+.column h3 {
   margin-bottom: 10px;
   line-height: 2rem;
 }
 
-.column p{
+.column p {
   line-height: 2rem;
 }
 
-#Hotline{
+.column a{
+  text-decoration: none;
+  color: black;
+}
+
+#Hotline {
   line-height: normal;
 }
 
+.social-media {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+}
 
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
 
+  .column {
+      margin: 10px 0;
+  }
+
+  .social-media {
+      justify-content: center;
+  }
+}
+
+.copyright {
+  background-color: #332225;
+  color: white;
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}

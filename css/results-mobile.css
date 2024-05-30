@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+body, button {
+    font-family: "Inter", sans-serif;
+}
 
 header {
     background-color: #84C992;
