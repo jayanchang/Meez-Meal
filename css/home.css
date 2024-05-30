@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-.inter-main-font{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
-}
-
 body {
     font-family: "Inter", sans-serif;
 }
@@ -22,16 +14,12 @@ header {
 }
 
 .top-banner {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-#top-banner {
+    padding: 10px 0;
     transition: margin-left .5s;
+    width: 100%;
 }
 
 .sidebar img{
@@ -51,11 +39,10 @@ header {
 /* MAIN BANNER */
 
 .main-banner{
-    width: 100%;
-    text-align: center;
-    position: relative;
-    /* padding: 50px 20px; */
     overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .main-banner h1{
@@ -88,9 +75,9 @@ header {
 }
 
 .main-banner img{
-    width: 100%;
-    height: auto;
     display: block;
+    height: auto;
+    width: 100%;
 }
 
 .start-now:hover{
@@ -104,7 +91,8 @@ header {
     text-align: center;
 }
 
-.promo h2{
+.promo h2,
+.promo p {
     color: white;
     font-size: 2.5rem;
     line-height: 1.5em;
@@ -114,12 +102,8 @@ header {
 }
 
 .promo p{
-    color: white;
     font-size: 1.5rem;
-    line-height: 1.5em;
-    margin-bottom: 20px;
     padding-bottom: 1em;
-    text-align: center;
 }
 
 .promo strong{
@@ -134,9 +118,8 @@ header {
     color: white;
     cursor: pointer;
     font-size: 1.5rem;
-    padding: 10px 25px;
-    text-align: center;
     margin-bottom: 3rem;
+    padding: 10px 25px;
 }
 
 .try-now:hover{
@@ -151,28 +134,21 @@ header {
 }
 
 .why-us h2{
-    text-align: center;
     font-size: 2.5rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 6rem 0;
+    text-align: center;
 }
 
 .features{
     display: flex;
+    gap: 5vw;
     justify-content: center;
-    gap: 1.5rem;
 }
 
 .feature{
     text-align: center;
     width: 22.5%;
-}
-
-.features:afer{
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .feature img{
@@ -183,8 +159,7 @@ header {
 .feature h3{
     font-size: 1.4rem;
     line-height: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 .view-menu{
@@ -195,10 +170,8 @@ header {
     color: white;
     cursor: pointer;
     font-size: 1rem;
+    margin: 5rem 0 3rem;
     padding: 10px 25px;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
 }
 
 .view-menu:hover{
@@ -212,33 +185,30 @@ header {
 }
 
 .top-menu h2{
-    text-align: center;
     font-size: 2.5rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding: 6rem 0 3rem;
+    text-align: center;
 }
 
 .carousel-container{
     margin: 1rem;
-    position: relative;
     overflow: hidden;
     padding-right: 10%;
+    position: relative;
 }
 
 .carousel{
-    height: 30rem;
-    width: 60%;
     display: flex;
+    gap: 8rem;
+    height: 30rem;
+    list-style: none;
+    margin: 0 25%;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-behavior: smooth;
-    list-style: none;
-    margin: 0;
     padding: 0;
-    gap: 8rem;
-    margin-right: 25%;
-    margin-left: 25%;
+    scroll-behavior: smooth;
+    width: 60%;
 }
 
 .carousel::-webkit-scrollbar{
@@ -251,9 +221,9 @@ header {
 }
 
 .carousel-item{
-    width: 20%;
-    height: 100%;
     flex: 1 0 auto;
+    height: 100%;
+    width: 20%;
 }
 
 .carousel img{
@@ -269,9 +239,8 @@ header {
     color: white;
     cursor: pointer;
     font-size: 1rem;
-    padding: 10px 25px;
-    text-align: center;
     margin-bottom: 3rem;
+    padding: 10px 25px;
 }
 
 .view-more:hover{
@@ -292,22 +261,28 @@ header {
 .magic-of-meez h2{
     font-size: 2.5rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding: 6rem 0 3rem;
 }
 
 .magic-of-meez strong{
     color: #D99DA6;
 }
 
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
 .meez-video{
     text-align: right;
+    margin-bottom: 6rem;
 }
 
 .awards{
     display: table;
-    table-layout: fixed;
     margin-top: 5rem;
+    table-layout: fixed;
 }
 
 .award{
@@ -326,18 +301,6 @@ header {
     text-align: center;
 }
 
-.two-column > *{
-    float: left;
-    width: 50%;
-    margin-bottom: 6rem;
-}
-
-.two-column:after{
-    content:"";
-    display: table;
-    clear: both;
-}
-
 @media (min-width:768px) {
     .two-column > * {
         width: 50%;
@@ -354,31 +317,27 @@ header {
 .reviews h2{
     font-size: 2.5rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding: 6rem 0 3rem;
 }
 
 .review-flex{
     display: flex;
     justify-content: space-evenly;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin: 0 10rem;
 }
 
 .review{
     background-color: white;
     border-radius: 2rem;
     box-shadow: 0px 4px 6px 2px grey;
-    height: auto;
-    text-align: left;
     margin: 1rem;
     padding: 1rem;
+    text-align: left;
 }
 
 .review-img-name{
     display: flex;
-    padding-left: 2rem;
-    padding-top: 1rem;
+    padding: 1rem 0 0 2rem;
 }
 
 .review h3{
@@ -387,10 +346,7 @@ header {
 }
 
 .review p{
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 2rem;
-    padding-top: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 .order-now{
@@ -401,10 +357,8 @@ header {
     color: white;
     cursor: pointer;
     font-size: 1rem;
+    margin: 3rem 0 6rem;
     padding: 10px 25px;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
 }
 
 .order-now:hover{
@@ -419,7 +373,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    /* max-width: 1500px; */
     padding: 0 20px;
 }
 
@@ -439,15 +392,19 @@ header {
     line-height: 2rem;
 }
 
-#Hotline{
+.column a{
+    text-decoration: none;
+}
+
+#hotline{
     line-height: normal;
 }
 
 .social-media{
-    padding-top: 1rem;
     display: flex;  
     gap: 1rem;
     justify-content: left;
+    padding-top: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -469,7 +426,81 @@ header {
 .copyright{
     background-color: #332225;
     color: white;
+    padding: 0.75rem 0;
     text-align: center;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+}
+
+@media (max-width: 1368px) {
+    /* Tablet Styles */
+    .logo img {
+        padding-left: 2rem;
+    }
+
+    .main-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .promo h2,
+    .promo p {
+        font-size: 2rem;
+    }
+
+    .why-us h2,
+    .top-menu h2,
+    .magic-of-meez h2,
+    .reviews h2 {
+        font-size: 2rem;
+    }
+
+    .review-flex {
+        margin: 0 5rem;
+    }
+}
+
+@media (max-width: 390px) {
+    /* Mobile Styles */
+    .logo img {
+        padding-left: 1rem;
+    }
+
+    .main-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-banner button {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    .promo h2,
+    .promo p {
+        font-size: 1.5rem;
+    }
+
+    .why-us h2,
+    .top-menu h2,
+    .magic-of-meez h2,
+    .reviews h2 {
+        font-size: 1.5rem;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .review-flex {
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    .carousel {
+        margin: 0;
+        width: 100%;
+        gap: 2rem;
+    }
 }
