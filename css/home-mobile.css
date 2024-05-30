@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .inter-main-font{
@@ -11,17 +12,14 @@
     font-variation-settings: "slnt" 0;
 }
 
-html, body{
-    overflow-x: hidden;
-}
-
-body {
+body, button {
     font-family: "Inter", sans-serif;
 }
 
 /* HEADER */
 header {
     background-color: #84C992;
+    box-shadow: 0px 8px 5px 0px grey;
     height: 3.875rem;
     display: flex;
     justify-content: space-between;
@@ -33,21 +31,18 @@ header {
     max-width: 60%;
     max-height: 60%;
     margin-left: 10vw;
-  
 }
   
 .right-logos {
     display: flex;
     align-items: center;
-    justify-content: center;
-  
-  
+    justify-content: center;  
 }
   
 .right-logos img {
     max-width: 15%;
     max-height: 30%;
-    margin: 1.5vw;
+    margin: 1vw;
   
 }
   
@@ -74,7 +69,7 @@ header {
 }
 
 .main-banner h1{
-    font-size: 3rem;
+    font-size: 1.1rem;
     font-weight: normal;
     left: 50%;
     line-height: 1.5em;
@@ -84,6 +79,7 @@ header {
     text-align: center;
     top: 25%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .main-banner button{
@@ -93,9 +89,9 @@ header {
     box-shadow: 0px 4px 5px 0px grey;
     color: white;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     left: 50%;
-    padding: 10px 25px;
+    padding: 8px 23px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -121,7 +117,7 @@ header {
 
 .promo h2{
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.1rem;
     line-height: 1.5em;
     margin-bottom: 20px;
     padding-top: 2rem;
@@ -130,9 +126,9 @@ header {
 
 .promo p{
     color: white;
-    font-size: 1.5rem;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1em;
+    margin-bottom: 1rem;
     padding-bottom: 1em;
     text-align: center;
 }
@@ -148,10 +144,10 @@ header {
     box-shadow: 0px 4px 3px 0px rgb(22, 22, 22);
     color: white;
     cursor: pointer;
-    font-size: 1.5rem;
-    padding: 10px 25px;
+    font-size: 0.8rem;
+    padding: 8px 23px;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .try-now:hover{
@@ -167,39 +163,43 @@ header {
 
 .why-us h2{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.features{
+.features {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-direction: column;
 }
 
 .feature{
-    text-align: center;
-    width: 22.5%;
-}
-
-.features:afer{
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    width: 100%;
+    margin: 5% 0;
+    gap: 10%;
 }
 
 .feature img{
-    max-width: 16rem;
-    max-height: 16rem;
+    text-align: left;
+    max-width: 45%;
+    max-height: auto;
+    margin-left: 5%;
 }
 
 .feature h3{
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    text-align: left;
+}
+
+.feature p{
+    font-size: 0.8rem;
+    text-align: left;
+    margin-right: 5%;
 }
 
 .view-menu{
@@ -212,7 +212,7 @@ header {
     font-size: 1rem;
     padding: 10px 25px;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -228,32 +228,27 @@ header {
 
 .top-menu h2{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.5em;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .carousel-container{
-    margin: 1rem;
     position: relative;
     overflow: hidden;
-    padding-right: 10%;
+    height: auto;
 }
 
 .carousel{
-    height: 30rem;
-    width: 60%;
+    height: auto;
+    width: 100%;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 8rem;
-    margin-right: 25%;
-    margin-left: 25%;
+    gap: 10px;
 }
 
 .carousel::-webkit-scrollbar{
@@ -263,17 +258,16 @@ header {
 .carousel{
     -ms-overflow-style: none;
     scrollbar-width: none;
+    height: auto;
 }
 
 .carousel-item{
-    width: 20%;
-    height: 100%;
     flex: 1 0 auto;
 }
 
 .carousel img{
-    display: block;
-    object-fit: fill;
+    height: 250px;
+    width: auto;
 }
 
 .view-more{
@@ -286,7 +280,8 @@ header {
     font-size: 1rem;
     padding: 10px 25px;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .view-more:hover{
@@ -295,6 +290,7 @@ header {
 
 .top-menu p{
     margin-bottom: 3rem;
+    font-size: 14px;
 }
 
 /* RATING BANNER */
@@ -305,7 +301,7 @@ header {
 }
 
 .magic-of-meez h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.5em;
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -315,8 +311,9 @@ header {
     color: #D99DA6;
 }
 
-.meez-video{
-    text-align: right;
+.meez-video iframe{
+    width: 350px;
+    height: 197px;
 }
 
 .awards{
@@ -327,38 +324,23 @@ header {
 
 .award{
     display: table-cell;
-    padding-left: 1.25rem;
     vertical-align: baseline;
+    width: 33.33%;
 }
 
 .award img{
     vertical-align: bottom;
+    width: 75%;
+    height: auto;
 }
 
 .award p{
     margin: 0;
     padding-top: 2rem;
     text-align: center;
+    font-size: 12px;
+    margin-bottom: 3rem;
 }
-
-.two-column > *{
-    float: left;
-    width: 50%;
-    margin-bottom: 6rem;
-}
-
-.two-column:after{
-    content:"";
-    display: table;
-    clear: both;
-}
-
-@media (min-width:768px) {
-    .two-column > * {
-        width: 50%;
-    }
-}
-
 /* REVIEW BANNER */
 
 .reviews{
@@ -376,8 +358,9 @@ header {
 .review-flex{
     display: flex;
     justify-content: space-evenly;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    flex-direction: column;
 }
 
 .review{
@@ -419,7 +402,7 @@ header {
     padding: 10px 25px;
     text-align: center;
     margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 .order-now:hover{
@@ -434,7 +417,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    /* max-width: 1500px; */
     padding: 0 20px;
 }
 
@@ -452,6 +434,11 @@ header {
 
 .column p{
     line-height: 2rem;
+}
+
+.column a{
+    text-decoration: none;
+    color: black;
 }
 
 #Hotline{
