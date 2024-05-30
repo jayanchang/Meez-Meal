@@ -69,7 +69,7 @@
                 <li><label for="carousel-1" class="carousel-bullet">•</label></li>
                 <li><label for="carousel-2" class="carousel-bullet">•</label></li>
                 <li><label for="carousel-3" class="carousel-bullet">•</label></li>
-                <li><label for="carousel-3" class="carousel-bullet">•</label></li>
+
             </ol>
         </div>
     </div>
@@ -82,8 +82,13 @@
                 <img src="../image/green curry tag.png" alt="Green Curry" class="slide-img">
                 <img src="../image/steak tag.png" alt="Steak" class="slide-img">
             </div>
-            <button class="prev-2" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next-2" onclick="changeSlide(1)">&#10095;</button>
+            <div class="slide">
+                <img src="../image/chicken taco tag.png" alt="chicken taco" class="slide-img">
+                <img src="../image/coconut curry tag.png" alt="coconut curry" class="slide-img">
+                <img src="../image/risoni tag.png" alt="Steak" class="slide-img">
+            </div>
+            <button class="prev-2" onclick="nextSlide(-1)">◀</button>
+            <button class="next-2" onclick="nextSlide(1)">▶</button>
         </div>
     </div>
 
@@ -140,15 +145,29 @@
         <p class="copyright"><b>&copy; Meez Meals 2024</b></p>
     </footer>
 
-    <!-- Search Function -->
+    <!--Search Function-->
     <div id="searchPanel" style="visibility: hidden; z-index: 20;">
         <div class="search-panel-white-container">
-            <form class="search-bar" action="search-results.html" method="GET">
+            <form class="search-bar" action="../html pages/result.html" method="GET">
                 <div style="display: flex; align-items: center; justify-content: center;">
-                    <input id="searchInput" type="text" name="q" placeholder="Search..." required>
-                    <button id="searchBtn" type="submit">
-                        <img src="../image/search.png" alt="Search" style="width: 4vw;">
+                    <input style="padding: 4px;" id="search" type="text" name="q" placeholder="Search..." required>
+                    <button style="border: 0;" id="searchBtn" type="submit">
+                        <img src="../image/search.png" alt="Search" style="max-width: 4vw;">
                     </button>
+                </div>
+                <!--Search History-->
+                <div class="search-history">
+                    <h3>Search History</h3>
+                </div>
+                <div class="search-history-content">
+                    <p>Curry Udon</p>
+                    <p>Margherita Pizza</p>
+                    <p>Green Curry</p>
+                    <p>Bibimbap</p>
+                    <p>Beef Bourguignon</p>
+                    <p>Quiche Lorraine</p>
+                    <p>Empanadas</p>
+                    <p>Beef Stroganoff</p>
                 </div>
             </form>
         </div>

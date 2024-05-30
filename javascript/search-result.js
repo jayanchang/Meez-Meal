@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Append results as images
         filteredResults.forEach(meal => {
             const imgElement = document.createElement('img');
-            imgElement.src = meal.imageUrl;
             imgElement.alt = meal.name;
+            imgElement.src = meal.imageUrl;
             imgElement.classList.add('result-item');
 
             resultsContainer.appendChild(imgElement);
@@ -58,15 +58,17 @@ document.addEventListener("DOMContentLoaded", function() {
 //side bar filter function
 // Event listener to open the filter sidebar
 document.getElementById('filterIcon').addEventListener('click', function() {
-    document.getElementById('filterSidebar').style.width = '250px';
     document.getElementById('filterSidebar').style.visibility = 'visible';
+    document.getElementById('filterSidebar').style.width = '249px';
+
 
 });
 
 // Function to close the filter sidebar
 function closeNav() {
-    document.getElementById('filterSidebar').style.width = '0';
     document.getElementById('filterSidebar').style.visibility =  'hidden';
+    document.getElementById('filterSidebar').style.width = '0';
+
 
 
 }
@@ -74,13 +76,13 @@ function closeNav() {
 // Adding event listeners to checkboxes to filter images
 document.querySelectorAll('input[name="filter"]').forEach(filterCheckbox => {
     filterCheckbox.addEventListener('change', function() {
-        // When any checkbox is changed, determine which checkboxes are checked
+
+        let images = document.querySelectorAll('.meal');
+
         let checkedTags = Array.from(document.querySelectorAll('input[name="filter"]:checked')).map(input => input.value);
         
-        // Select all images
-        let images = document.querySelectorAll('.meal');
+
         
-        // Loop through all images to determine which ones to display
         images.forEach(img => {
             // Get the tags from data attribute
             let tags = img.getAttribute('data-tags').split(' ');
@@ -98,15 +100,17 @@ document.querySelectorAll('input[name="filter"]').forEach(filterCheckbox => {
 // Event listener to open the filter sidebar
 document.getElementById('filterIcon').addEventListener('click', function() {
     var sidebar = document.getElementById('filterSidebar');
-    sidebar.style.width = '250px';
     sidebar.style.visibility = 'visible';
+    sidebar.style.width = '249px';
+
 });
 
 // Function to close the filter sidebar
 function closeNav() {
     var sidebar = document.getElementById('filterSidebar');
-    sidebar.style.width = '0';
     sidebar.style.visibility = 'hidden';
+    sidebar.style.width = '0';
+
 }
 
 
@@ -120,7 +124,7 @@ document.getElementById("search").addEventListener("keyup", function(event) {
 
 document.getElementById("searchBtn").addEventListener("click", function() {
     var searchQuery = encodeURIComponent(document.getElementById('searchInput').value);
-    // Redirect to your own search results page with the query as a parameter
+
     document.location.href = "/search-results.html?q=" + searchQuery;
 });
 

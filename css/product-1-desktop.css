@@ -180,12 +180,12 @@ button.order-now-btn:hover {
     transform: translateX(-100%); /* Initially translate out of view */
 }
 
-.slide.active {
+.slide.on {
     display: flex;
     transform: translateX(0%); /* Slide in from left */
 }
   
-.slide.inactive {
+.slide.off {
     transform: translateX(100%); /* Slide out to right */
 }
   

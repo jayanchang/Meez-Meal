@@ -25,55 +25,69 @@ function toggleAccordion(content, button) {
 }
 
 // Slideshow control variables
-let slideIndex = 0;
 let slides = document.getElementsByClassName("slide");
+let slidesLength = slides.length;
+let imageIndex = 0;
 
 // Function to cycle through slides automatically
-function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-        slides[i].classList.add('inactive');
+function displayCarousel() {
+
+
+    // Mark all slides as inactive
+
+
+    for (let i = 0; i < slidesLength; i++) {
+        slides[i].classList.remove('on');
+        slides[i].classList.add('off');
+
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].classList.add('active');
-    slides[slideIndex - 1].classList.remove('inactive');
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+
+    // Increment slide index or reset if at the end
+    imageIndex++;
+    if (imageIndex > slidesLength) {
+        imageIndex = 1;
+    }
+
+    // Activate the new slide
+    slides[imageIndex - 1].classList.add('on');
+    slides[imageIndex - 1].classList.remove('off');
+
+    // Set a timeout to automatically cycle slides
+    setTimeout(displayCarousel, 1300);
 }
 
-// Function to change slide manually
-function changeSlide(n) {
-    slides[slideIndex - 1].classList.remove('active');
-    slides[slideIndex - 1].classList.add('inactive');
-    slideIndex += n;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = slides.length; }
-    slides[slideIndex - 1].classList.add('active');
-    slides[slideIndex - 1].classList.remove('inactive');
+function nextSlide(n) {
+
+    // Adjust current slide before changing
+    slides[imageIndex - 1].classList.add('off');
+    slides[imageIndex - 1].classList.remove('on');
+
+
+    // Calculate new slide index
+    imageIndex = imageIndex + n;
+    if (slidesLength < imageIndex) {
+        imageIndex = 1;
+    }
+    if (1 > imageIndex) {
+        imageIndex = slidesLength;
+    }
+
+    // Activate new slide
+    slides[imageIndex - 1].classList.remove('off');
+    slides[imageIndex - 1].classList.add('on');
+
 }
 
-// Initialization on DOM content loaded
+// Initialize first slide and start the slideshow
 document.addEventListener("DOMContentLoaded", function() {
-    slides[0].classList.add('active'); // Ensure the first slide is visible initially
-    setTimeout(showSlides, 3000); // Start the slideshow
+    slides[0].classList.add('on'); // Ensure the first slide is visible initially
+    setTimeout(displayCarousel, 1300); // Start the slideshow
 });
 
-// Debugging version of showSlides function for console feedback
-function debugShowSlides() {
-    console.log("Showing slides, current index: ", slideIndex);
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-        slides[i].classList.add('inactive');
-        console.log("Slide " + i + " set to inactive");
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    console.log("New slide index: ", slideIndex);
-    slides[slideIndex - 1].classList.add('active');
-    slides[slideIndex - 1].classList.remove('inactive');
-    console.log("Slide " + (slideIndex - 1) + " set to active");
-    setTimeout(debugShowSlides, 3000);
-}
+
+
+
+
 
 
 // Event listeners for search-related functionality
