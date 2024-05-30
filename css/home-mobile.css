@@ -11,50 +11,65 @@
     font-variation-settings: "slnt" 0;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Inter", sans-serif;
 }
 
 /* HEADER */
-
 header {
     background-color: #84C992;
-}
-
-.top-banner {
+    height: 3.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100%;
 }
-
-#top-banner {
-    transition: margin-left .5s;
+  
+.logo {
+    text-align: center;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 10vw;
+  
 }
-
-.sidebar img{
-    padding-left: 2rem;
+  
+.right-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
 }
-
-.logo img {
-    height: 50px;
-    padding-left: 7rem;
+  
+.right-logos img {
+    max-width: 15%;
+    max-height: 30%;
+    margin: 1.5vw;
+  
 }
-
-.navigations img{
-    padding-right: 2rem;
-    right: 10%;
+  
+.left-logos {
+    display: flex;
+    align-items: center;
+    margin-left: 3vw;
+  
+}
+  
+.left-logos img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 1vw;
 }
 
 /* MAIN BANNER */
 
 .main-banner{
-    width: 100%;
+    width: 100VW;
     text-align: center;
     position: relative;
-    /* padding: 50px 20px; */
     overflow: hidden;
 }
 
