@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    <title>Meez Meal Home Page</title>
+</head>
+<body>
+    <header>
+        <nav id="top-banner" class="top-banner">
+            <div class="sidebar">
+                <a href="#"><img src="../image/Sidebar - Desktop.png" alt="navbar"></a>
+            </div>
+            <div class="logo">
+                <a href="home.html"><img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="header logo"></a>
+            </div>
+            <div class="navigations">
+                <a href="#"><img src="../image/search.png" alt="Search"></a>
+                <a href="#"><img src="../image/cart.png" alt="Cart"></a>
+                <a href="#"><img src="../image/profile.png" alt="Profile"></a>
+            </div>
+        </nav>     
+    </header>
+
+    <main>
+        <div class="progress-bar">
+            <ul>
+                <li>
+                    <div class="progress one" id="one">
+                        <i class="uil uil-check"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress two">
+                        <i class="uil uil-check"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="progress three">
+                        <i class="uil uil-check"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <section class="user-products">
+            <div class="summary">
+                <img src="../image/sweet tofu round.png" alt="product-image">
+                <div class="product-details">
+                    <h3 class="product-name">Sweet Tofu with Rice</h3>
+                    <p>$<a id="price">15.5</a></p>
+                </div>
+                <div class="product-count">
+                    <button id="countdown">-</button>
+                    <h4><a id="count">1</a></h4>
+                    <button id="countup"><a>+</a></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="total-and-meez">
+            <img src="../image/meez over line 1.png" alt="meez-peaking">
+            <div class="total-price">
+                <div class="price-text">
+                    <p>Total Price</p>
+                    <h3>$<a id="price">15.5</a></h3>
+                </div>
+                <a href="cart2.html" class="cart-continue"><b>CONTINUE</b></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="column" id="about-us">
+                <h4>About Us</h4>
+                <br/>
+                <p><a href="">Our Story</a></p>
+                <p><a href="">Meez Kitchen Blog</a></p>
+                <p><a href="">FAQ</a></p>
+            </div>
+            <div class="column" id="my-account">
+                <h4>My Account</h4>
+                <br/>
+                <p><a href="">Orders</a></p>
+                <p><a href="">Ingredient Preferences</a></p>
+                <p><a href="">Delivery Preferences</a></p>
+            </div>
+            <div class="column" id="contact-us">
+                <h4>Contact Us</h4>
+                <br/>
+                <p id="Hotline">Hotline: 773.916.6339<br/>(Available 5pm-8pm CT Daily)</p>
+                <img src="../image/MeezMealsLogo-white-owl 1.png">
+                <div class="social-media">
+                    <a href=""><img src="../image/facebook-icon.png" alt="Facebook"></a>
+                    <a href=""><img src="../image/twitter-icon.png" alt="Twitter"></a>
+                    <a href=""><img src="../image/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright"><b>&copy; Meez Meals 2024</b></p>
+    </footer>
+    <script src="../javascript/cart.js"></script>
+</body>
+</html>
