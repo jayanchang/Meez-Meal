@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var searchQuery = decodeURIComponent(getQueryParam('q'));
     document.getElementById('searchResultsTitle').textContent += '"' + searchQuery + '"';
 
-    // Here you would typically make an AJAX request to your server to fetch the search results
-    // For now, we'll just simulate this with a placeholder
     document.getElementById('resultsContainer').innerHTML = '<p>Simulated search results for "' + searchQuery + '"</p>';
 });
 
@@ -20,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Filter function
 document.addEventListener("DOMContentLoaded", function() {
-    function updateResults(filterType) {
-        const resultsContainer = document.getElementById('resultsContainer');
-        resultsContainer.innerHTML = ''; // Clear existing results
+    function filterResult(filterType) {
+        const filterContainer = document.getElementById('resultsContainer');
+        filterContainer.innerHTML = ''; // Clear existing results
 
         // Simulate fetching data based on filter
         const filteredResults = getFilteredResults(filterType);
@@ -34,44 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
             imgElement.src = meal.imageUrl;
             imgElement.classList.add('result-item');
 
-            resultsContainer.appendChild(imgElement);
+            filterContainer.appendChild(imgElement);
         });
     }
 
-    // Simulated function to return filtered results
-    function getFilteredResults(filterType) {
-        // Here you would typically make an API call or filter your data
-        return [
-            { name: 'Meal 1', imageUrl: 'path/to/image1.jpg' },
-            { name: 'Meal 2', imageUrl: 'path/to/image2.jpg' }
-            // Add more meals based on actual data and filter
-        ];
-    }
 
-    document.getElementById('filterNew').addEventListener('click', () => updateResults('new'));
-    document.getElementById('filterPopular').addEventListener('click', () => updateResults('popular'));
-    document.getElementById('filterRating').addEventListener('click', () => updateResults('rating'));
+
+    document.getElementById('filterNew').addEventListener('click', () => filterResult('new'));
+    document.getElementById('filterPopular').addEventListener('click', () => filterResult('popular'));
+    document.getElementById('filterRating').addEventListener('click', () => filterResult('rating'));
 });
 
-
-
-//side bar filter function
-// Event listener to open the filter sidebar
-document.getElementById('filterIcon').addEventListener('click', function() {
-    document.getElementById('filterSidebar').style.visibility = 'visible';
-    document.getElementById('filterSidebar').style.width = '249px';
-
-
-});
-
-// Function to close the filter sidebar
-function closeNav() {
-    document.getElementById('filterSidebar').style.visibility =  'hidden';
-    document.getElementById('filterSidebar').style.width = '0';
-
-
-
-}
 
 // Adding event listeners to checkboxes to filter images
 document.querySelectorAll('input[name="filter"]').forEach(filterCheckbox => {
