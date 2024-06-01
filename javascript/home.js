@@ -1,3 +1,4 @@
+// Carousell
 const slidesContainer = document.getElementById("carousel");
 const slide = document.querySelector(".carousel-item");
 

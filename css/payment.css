@@ -234,6 +234,13 @@ ul li .progress .uil {
     text-align: center;
 }
 
+.cart-continue a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
 .cart-continue:hover {
     background-color: #3FAB53;
 }

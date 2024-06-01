@@ -8,42 +8,29 @@ button {
   font-family: "Inter", sans-serif;
 }
 
+/* Header Styles */
 header {
   background-color: #84C992;
   height: 3.875rem;
   display: flex;
   justify-content: space-between;
-}
-
-.menu-h1 {
-  font-size: 32px;
-  margin-left: 10vw;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .logo {
   text-align: center;
-
+  max-width: 100%;
+  height: auto;
 }
 
+.left-logos,
 .right-logos {
   display: flex;
   align-items: center;
-
 }
 
-.right-logos img {
-  max-width: 50%;
-  max-height: 50%;
-  margin: 1vw;
-
-}
-
-.left-logos {
-  display: flex;
-  align-items: center;
-
-}
-
+.right-logos img,
 .left-logos img {
   max-width: 50%;
   max-height: 50%;
@@ -302,8 +289,12 @@ input[type="checkbox"] {
   text-align: left;
   display: block;
   margin-bottom: 1vw;
+  text-decoration: none;
+}
 
-
+#sideMenu a{
+  text-decoration: none;
+  color: black;
 }
 
 #sideMenu p:hover {
@@ -364,6 +355,11 @@ img[src="../image/owl peaking.png"] {
   line-height: 2rem;
 }
 
+.column a {
+  text-decoration: none;
+  color: black;
+}
+
 #Hotline {
   line-height: normal;
 }
@@ -373,4 +369,28 @@ img[src="../image/owl peaking.png"] {
   display: flex;
   gap: 1rem;
   justify-content: left;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .column {
+      margin: 10px 0;
+  }
+
+  .social-media {
+      justify-content: center;
+  }
+}
+
+.copyright {
+  background-color: #332225;
+  color: white;
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }

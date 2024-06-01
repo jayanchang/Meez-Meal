@@ -17,7 +17,7 @@ countup_btn.addEventListener("click", function () {
 countdown_btn.addEventListener("click", function (){
     if (count == 0){
         return;
-    } else{
+    } else {
         count--;
         changed_price = price * count;
         disp.innerHTML = count;
@@ -25,5 +25,3 @@ countdown_btn.addEventListener("click", function (){
         document.getElementById("tot-price-text").textContent = changed_price;
     }
 });
-
-

@@ -103,6 +103,14 @@ ul li .progress {
     height: 0;
 }
 
+#two {
+    background-color: #65DB7B;
+}
+
+.two.progress.two::after {
+    background-color: #65DB7B;
+}
+
 ul li .progress .uil {
     display: none;
 }

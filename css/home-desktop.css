@@ -1,11 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body,
 button {
     font-family: "Inter", sans-serif;
+}
+
+main {
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -24,12 +29,13 @@ header {
 
 .logo {
     text-align: center;
-    margin-left: 30%;
+    margin-left:30%;
 }
 
 .right-logos {
     display: flex;
     align-items: center;
+
 }
 
 .right-logos img {
@@ -41,6 +47,7 @@ header {
 .left-logos {
     display: flex;
     align-items: center;
+
 }
 
 .left-logos img {
@@ -53,21 +60,22 @@ header {
 
 .main-banner {
     width: 100%;
+    height: auto;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
 .main-banner h1 {
-    font-size: 3rem;
+    font-size: 4VW;
     font-weight: normal;
-    left: 50%;
+    left: 50VW;
     line-height: 1.5em;
-    margin-bottom: 20px;
-    padding-bottom: 1em;
+    margin-bottom: 5.3rem;
     position: absolute;
     text-align: center;
-    top: 25%;
+    min-width: 100%;
+    top: 15VH;
     transform: translate(-50%, -50%);
 }
 
@@ -80,7 +88,7 @@ header {
     cursor: pointer;
     font-size: 1.5rem;
     left: 50%;
-    padding: 10px 25px;
+    padding: 0.625rem 1.563rem;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -91,11 +99,23 @@ header {
 .main-banner img {
     width: 100%;
     height: auto;
-    display: block;
+    vertical-align: top;
 }
 
 .start-now:hover {
     background-color: #3FAB53;
+}
+
+@media screen and (max-width: 768px) {
+    .main-banner h1 {
+        font-size: 3VW;
+        top: 25%;
+    }
+
+    .start-now {
+        font-size: 2VW;
+
+    }
 }
 
 /* PROMOTION BANNER */
@@ -107,7 +127,7 @@ header {
 
 .promo h2 {
     color: white;
-    font-size: 2.5rem;
+    font-size: 3VW;
     line-height: 1.5em;
     margin-bottom: 20px;
     padding-top: 2rem;
@@ -118,7 +138,7 @@ header {
     color: white;
     font-size: 1.5rem;
     line-height: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 1.563rem;
     padding-bottom: 1em;
     text-align: center;
 }
@@ -172,12 +192,6 @@ header {
     width: 22.5%;
 }
 
-.features:afer {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .feature img {
     max-width: 16rem;
     max-height: 16rem;
@@ -210,6 +224,42 @@ header {
     background-color: #3FAB53;
 }
 
+@media (max-width: 1280px) {
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .feature {
+        display: flex;
+        width: 100%;
+        margin: 5% 0;
+        gap: 10%;
+    }
+
+    .feature img {
+        text-align: left;
+        max-width: 45%;
+        max-height: auto;
+        margin-left: 17%;
+    }
+    
+    .feature h3 {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .feature p {
+        text-align: left;
+        margin-right: 5%;
+    }
+
+    .view-menu {
+        margin-top: 3rem;
+    }
+}
+
 /* TOP MENU BANNER */
 
 .top-menu {
@@ -233,7 +283,7 @@ header {
 
 .carousel {
     height: 30rem;
-    width: 60%;
+    width: 60VW;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -289,6 +339,15 @@ header {
     margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 768px) {
+    .carousel{
+        height: auto;
+        width: 80VW;
+        gap: 10rem;
+        margin-left: 10%;
+    }
+}
+
 /* RATING BANNER */
 
 .magic-of-meez {
@@ -308,13 +367,15 @@ header {
 }
 
 .meez-video {
-    text-align: right;
+    text-align: center;
+    width: 50VW;
 }
 
 .awards {
     display: table;
-    table-layout: fixed;
+    table-layout: auto;
     margin-top: 5rem;
+    width: 50VW;
 }
 
 .award {
@@ -336,18 +397,24 @@ header {
 .two-column>* {
     float: left;
     width: 50%;
+    margin-left: 0rem;
     margin-bottom: 6rem;
 }
 
 .two-column:after {
     content: "";
     display: table;
+    table-layout: auto;
     clear: both;
 }
 
-@media (min-width:768px) {
-    .two-column>* {
-        width: 50%;
+@media (max-width:768px) {
+    .meez-video {
+        width: 100%;
+        text-align: center;
+    }
+    .awards {
+        width: 100%;
     }
 }
 
@@ -368,8 +435,8 @@ header {
 .review-flex {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    margin-right: 10VW;
+    margin-left: 10VW;
 }
 
 .review {
@@ -377,7 +444,7 @@ header {
     border-radius: 2rem;
     box-shadow: 0px 4px 6px 2px grey;
     height: auto;
-    min-width: 25%;
+    min-width: 25VW;
     text-align: left;
     margin: 1rem;
     padding: 1rem;
@@ -420,6 +487,12 @@ header {
 
 .order-now:hover {
     background-color: #3FAB53;
+}
+
+@media (max-width:768px) {
+    .review-flex {
+        flex-direction: column;
+    }
 }
 
 /* FOOTER */

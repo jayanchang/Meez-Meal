@@ -77,11 +77,11 @@ ul li {
 }
 
 ul li .progress {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: #A8A8A8;
-    margin: 12px 52px;
+    margin: 12px 40px;
     display: grid;
     place-items: center;
     color: #fff;
@@ -92,21 +92,22 @@ ul li .progress {
 .progress::after {
     content: " ";
     position: absolute;
-    width: 105px;
-    height: 2.5px;
+    width: 80px;
+    height: 2px;
     background-color: #A8A8A8;
-    right: 30px;
+    right: 20px;
 }
 
 #one {
     background-color: #65DB7B;
 }
 
-#two {
-    background-color: #65DB7B;
+.one::after {
+    width: 0;
+    height: 0;
 }
 
-#three {
+#two {
     background-color: #65DB7B;
 }
 
@@ -114,13 +115,12 @@ ul li .progress {
     background-color: #65DB7B;
 }
 
-.three.progress.three::after {
+#three {
     background-color: #65DB7B;
 }
 
-.one::after {
-    width: 0;
-    height: 0;
+.three.progress.three::after {
+    background-color: #65DB7B;
 }
 
 ul li .progress .uil {
