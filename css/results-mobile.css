@@ -63,12 +63,9 @@ body {
 img[src="../image/owl i mage reverse.png"] {
     position: absolute;
     bottom: 0;
-    /* Adjust as necessary */
     top: 100vw;
     right: 0;
-    /* Adjust as necessary */
     width: 15vw;
-    /* Adjust size as needed */
     height: auto;
     margin: 0vw;
 }
@@ -76,12 +73,9 @@ img[src="../image/owl i mage reverse.png"] {
 img[src="../image/owl peaking.png"] {
     position: absolute;
     bottom: 0;
-    /* Adjust as necessary */
     top: 30vw;
     left: 0;
-    /* Adjust as necessary */
     width: 15vw;
-    /* Adjust size as needed */
     height: auto;
     margin: 0vw;
 }
@@ -194,6 +188,20 @@ img[src="../image/owl peaking.png"] {
     border-color: #84C992;
 }
 
+#sideMenu a {
+    color: #000000;
+    text-decoration: none; 
+}
+
+#sideMenu a:visited {
+    color: #000000; 
+}
+
+
+#sideMenu a:active {
+    color: #000000; 
+}
+
 
 #sideMenu p {
     font-size: 14px;
@@ -268,13 +276,9 @@ img[src="../image/owl peaking.png"] {
 .search-result-image {
     display: flex;
     flex-direction: row;
-    /* Ensure children are in a row */
     flex-wrap: wrap;
-    /* Allows items to wrap to the next line */
     justify-content: space-around;
-    /* Even spacing horizontally */
     align-items: center;
-    /* Center images vertically */
     padding: 12vw;
     padding-top: 2vw;
     width: 65%;
@@ -286,54 +290,56 @@ img[src="../image/owl peaking.png"] {
 /* Styles for images within the container */
 .search-result-image img {
     width: 70vw;
-    /* Adjusted to allow two images per row */
     height: auto;
-    /* Maintain aspect ratio */
     margin-bottom: 2.5vw;
 
 }
 
-/* Sidebar styling */
-/* Sidebar styling */
-.sidebar {
+#filterSidebar {
     height: 100%;
-    width: 0;
+    width: 100%; 
+    top: 0;
+    right: 0; 
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-    z-index: 1;
+    visibility: hidden;
+    z-index: 10;
+  
+  }
+  
+  
+  .filter-options {
+    transition: ease-in 0.5s;
+    height: 100%;
+    width: 60%; 
+    position: fixed;
+    z-index: 21;
     top: 0;
     right: 0;
     background-color: #fbfbfb;
     overflow-x: hidden;
-    transition: 0.5s;
     padding-top: 3vw;
-    margin-top: 3.875rem;
     padding: 2vw;
-}
+    border-top: 3.875rem;
+    border-style: solid;
+    border-color: #84C992;
+    transition: width 2s;
 
-.sidebar h2 {
-    font-size: 18px;
-}
+  }
 
-.sidebar label {
-    font-size: 13px;
-}
+  .filter-options h2 {
+    font-size: 20px;
+    margin-bottom: 10vw;
+  }
 
-.sidebar-div {
-    margin-bottom: 3vw;
-    margin-top: 3vw;
-}
-
-.sidebar a.closebtn {
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    margin-bottom: 6vw;
-}
+  
+  .filter-options div {
+    margin-bottom: 10vw;
+    font-size: 16px;
+  }
 
 
 
-/* Additional styling for sidebar content */
 input[type="checkbox"] {
     margin-right: 10px;
 }
@@ -342,7 +348,6 @@ input[type="checkbox"] {
 #filterSidebar {
     width: 0;
     visibility: hidden;
-    /* Add other styles for transition or positioning */
 }
 
 

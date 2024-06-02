@@ -94,6 +94,17 @@ body {
   max-width: 100%;
 }
 
+.carousel-item a,
+.carousel-item a:link,   
+.carousel-item a:visited, 
+.carousel-item a:hover,   
+.carousel-item a:active,  
+.carousel-item a:focus {  
+    color: #ffffff; 
+}
+
+
+
 .overlay {
   position: absolute;
   top: 0;
@@ -113,7 +124,6 @@ body {
 
 .carousel-item:hover .overlay {
   opacity: 1;
-  /* Show the overlay when user hovers */
 }
 
 
@@ -136,7 +146,6 @@ body {
   color: white;
   text-align: center;
   font-size: 20px;
-  /* Adjust as necessary */
 }
 
 
@@ -151,13 +160,11 @@ body {
   line-height: 35px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
   cursor: pointer;
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   text-align: center;
   width: 40px;
-  z-index: 10;
+  z-index: 20;
 }
 
 .carousel-control.prev {
@@ -213,18 +220,7 @@ body {
   color: #000000;
 }
 
-#title {
-  width: 100%;
-  position: absolute;
-  padding: 0px;
-  margin: 0px auto;
-  text-align: center;
-  font-size: 27px;
-  color: rgba(255, 255, 255, 1);
-  font-family: 'Open Sans', sans-serif;
-  z-index: 9999;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
-}
+
 
 .slideshow-container {
   position: relative;
@@ -239,20 +235,16 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   transition: transform 2s ease-in;
-  /* Add transition for smooth effect */
   transform: translateX(-100%);
-  /* Initially translate out of view */
 }
 
 .slide.on {
   display: flex;
   transform: translateX(0%);
-  /* Slide in from left */
 }
 
 .slide.off {
   transform: translateX(100%);
-  /* Slide out to right */
 }
 
 .slide-img {
@@ -308,26 +300,10 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   transition: transform 2s ease-in;
-  /* Add transition for smooth effect */
   transform: translateX(-100%);
-  /* Initially translate out of view */
 }
 
-.slide.on {
-  display: flex;
-  transform: translateX(0%);
-  /* Slide in from left */
-}
 
-.slide.off {
-  transform: translateX(100%);
-  /* Slide out to right */
-}
-
-.slide-img {
-  width: calc(100% / 3 - 10px);
-  margin: 0 5px;
-}
 
 
 .prev-2,
@@ -374,71 +350,74 @@ body {
 
 .container-buttom-carousel {
   width: 100%;
+  height: 28.9vw;
+  gap: 0.58vw;
   display: flex;
   justify-content: center;
-  height: 500px;
-  gap: 10px;
+  
 }
 
 .container-buttom-carousel>div {
   flex: 0 0 18%;
   border-radius: 0.5rem;
-  transition: 0.5s ease-in-out;
   cursor: pointer;
   box-shadow: 1px 5px 15px #1e0e3e;
+  transition: 0.5s ease-in-out;
   position: relative;
   overflow: hidden;
 }
 
 .container-buttom-carousel>div:nth-of-type(1) {
-  background: url("../image/bulgogi.png") no-repeat 50%/cover;
+  background: url("../image/bulgogi.png")  40%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(2) {
-  background: url("../image/spaghetti.png") no-repeat 50%/cover;
+  background: url("../image/spaghetti.png")  40%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(3) {
-  background: url("../image/risotto.png") no-repeat 50%/cover;
+  background: url("../image/risotto.png")  40%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(4) {
-  background: url("../image/chicken\ tago\ copy.jpg") no-repeat 50%/cover;
+  background: url("../image/chicken\ tago\ copy.jpg") 40%/cover;
 }
 
 .container-buttom-carousel>div .content-carousel {
-  font-size: 1.5rem;
-  color: #fff;
   display: flex;
   align-items: center;
-  padding: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 16px;
   opacity: 0;
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  background: #02022e;
-  background: linear-gradient(0deg, rgba(2, 2, 46, 0.6755077031) 0%, rgba(255, 255, 255, 0) 100%);
+  background: #000012;
+  background: linear-gradient(0deg, rgba(2, 2, 68, 0.676) 0%, rgba(23, 23, 23, 0) 100%);
   transform: translatey(100%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
-  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, transform 0.4s 0.2s;
+ 
 
 }
 
 .container-buttom-carousel>div .content-carousel span {
   display: block;
-  margin-top: 5px;
   font-size: 1.2rem;
+  margin-top: 0.3vw;
+
 }
 
 .container-buttom-carousel>div:hover {
-  flex: 0 0 400px;
+  transform: translatey(-1.736vw);
+  flex: 0 0 23vw;
   box-shadow: 1px 3px 15px #7b7b7b;
-  transform: translatey(-30px);
+
 }
 
 .container-buttom-carousel>div:hover .content-carousel {
-  opacity: 1;
   transform: translatey(0%);
+  opacity: 1;
   visibility: visible;
 }
 
@@ -450,7 +429,6 @@ body {
   margin-top: 2.5vw;
   background-color: #D99DA6;
   padding-top: 1vw;
-  /* Add padding to create space at the top inside the container */
   padding-bottom: 1vw;
 }
 
@@ -465,7 +443,6 @@ body {
 
 #searchInput {
   flex-grow: 1;
-  /* Allows the input to expand and fill the space */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -576,6 +553,19 @@ body {
   border-color: #84C992;
 }
 
+#sideMenu a {
+  color: #000000;
+  text-decoration: none; 
+}
+
+#sideMenu a:visited {
+  color: #000000; 
+}
+
+
+#sideMenu a:active {
+  color: #000000; 
+}
 
 #sideMenu p {
   font-size: 20px;

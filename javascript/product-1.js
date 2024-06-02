@@ -24,13 +24,13 @@ function toggleAccordion(content, button) {
     }
 }
 
-// Slideshow control variables
+
 let slides = document.getElementsByClassName("slide");
 let slidesLength = slides.length;
 let imageIndex = 0;
 
-// Function to cycle through slides automatically
-function displayCarousel() {
+// Carousel Sliders
+function Carousel() {
 
 
     // Mark all slides as inactive
@@ -53,17 +53,17 @@ function displayCarousel() {
     slides[imageIndex - 1].classList.remove('off');
 
     // Set a timeout to automatically cycle slides
-    setTimeout(displayCarousel, 1300);
+    setTimeout(Carousel, 1300);
 }
 
-function nextSlide(n) {
+function moveSLide(n) {
 
-    // Adjust current slide before changing
+
     slides[imageIndex - 1].classList.add('off');
     slides[imageIndex - 1].classList.remove('on');
 
 
-    // Calculate new slide index
+
     imageIndex = imageIndex + n;
     if (slidesLength < imageIndex) {
         imageIndex = 1;
@@ -72,16 +72,16 @@ function nextSlide(n) {
         imageIndex = slidesLength;
     }
 
-    // Activate new slide
+
     slides[imageIndex - 1].classList.remove('off');
     slides[imageIndex - 1].classList.add('on');
 
 }
 
-// Initialize first slide and start the slideshow
+
 document.addEventListener("DOMContentLoaded", function() {
-    slides[0].classList.add('on'); // Ensure the first slide is visible initially
-    setTimeout(displayCarousel, 1300); // Start the slideshow
+    slides[0].classList.add('on'); 
+    setTimeout(Carousel, 1300); 
 });
 
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Event listeners for search-related functionality
+// Search Function
 document.getElementById("search").addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         event.preventDefault();
@@ -99,9 +99,8 @@ document.getElementById("search").addEventListener("keyup", function(event) {
 });
 
 document.getElementById("searchBtn").addEventListener("click", function() {
-    var searchQuery = encodeURIComponent(document.getElementById('searchInput').value);
-    // Redirect to your own search results page with the query as a parameter
-    document.location.href = "/search-results.html?q=" + searchQuery;
+    let keywordMeal = encodeURIComponent(document.getElementById('searchInput').value);
+    document.location.href = "/search-results.html?q=" + keywordMeal;
 });
 
 document.getElementById("triggerSearch").addEventListener("click", function(e) {

@@ -8,43 +8,54 @@
     <link rel="stylesheet" media="(min-width: 394px)" href="../css/results-desktop.css">
     <title>Search Results</title>
 </head>
+<header>
+    <div class="left-logos">
+        <img class="logo" src="../image/Sidebar - Desktop.png" alt="header logo Sidebar" id="triggerSidePanel">
+    </div>
+    <img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo">
+    <div class="right-logos">
+        <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
+        <img src="../image/cart.png" alt="header logo cart">
+        <img src="../image/profile.png" alt="header logo profile">
+    </div>
+</header>
 
 <body>
-    <header>
-        <div class="left-logos">
-            <img class="logo" src="../image/Sidebar - Desktop.png" alt="header logo Sidebar" id="triggerSidePanel">
-        </div>
-        <img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo">
-        <div class="right-logos">
-            <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
-            <img src="../image/cart.png" alt="header logo cart">
-            <img src="../image/profile.png" alt="header logo profile">
-        </div>
-    </header>
+
 
     <!--Search Result Container-->
     <div class="search-result-container">
-        <h2 id="searchResultsTitle">Results for:</h2>
+        <h2 id="resultName">Results for:</h2>
         <img src="../image/Filter alt.png" alt="Filter Icon" id="filterIcon" style="cursor: pointer;">
     </div>
 
-    <!-- Filter Sidebar -->
-    <div id="filterSidebar" class="sidebar" style="width: 0; visibility: hidden;">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <h2 style="margin-bottom: 1vw;">Filter By</h2>
-        <div class="sidebar-div">
-            <input type="checkbox" id="recommended" name="filter" value="recommended">
-            <label for="recommended">Recommended</label>
-        </div>
-        <div class="sidebar-div">
-            <input type="checkbox" id="new" name="filter" value="new">
-            <label for="new">New Arrivals</label>
-        </div>
-        <div class="sidebar-div">
-            <input type="checkbox" id="popular" name="filter" value="popular">
-            <label for="popular">Most Popular</label>
+    <!-- Filter Sidebar Code -->
+    <div id="filterSidebar" style="transition: ease-in 0.5s;">
+        <div class="filter-options" style="transition-timing-function: ease-in 3s">
+            <h2>Filter By</h2>
+            <div>
+                <input type="checkbox" id="recommended" name="filter" value="recommended">
+                <label for="recommended">Recommended</label>
+            </div>
+            <div>
+                <input type="checkbox" id="new" name="filter" value="new">
+                <label for="new">New Arrivals</label>
+            </div>
+            <div>
+                <input type="checkbox" id="popular" name="filter" value="popular">
+                <label for="popular">Most Popular</label>
+            </div>
         </div>
     </div>
+
+
+    <!-- Container to Display Filtered Meals -->
+    <div id="mealsContainer">
+        <!-- Filtered meals will be appended here by the JavaScript -->
+    </div>
+
+    <script src="path_to_your_script.js"></script>
+
 
     <!--Owl in blank space-->
     <div>
@@ -97,7 +108,7 @@
         <div id="sideMenu">
             <div>
                 <p>Login</p>
-                <p>Menu</p>
+                <a href="../html pages/menu.html"><p>Menu</p></a>
                 <p>About Us</p>
                 <p>Contact</p>
             </div>
@@ -140,5 +151,3 @@
 
 </html>
 ```
-
-

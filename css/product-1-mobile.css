@@ -215,20 +215,16 @@ button.order-now-btn:hover {
   flex-wrap: nowrap;
   justify-content: space-between;
   transition: transform 2s ease-in;
-  /* Add transition for smooth effect */
   transform: translateX(-100%);
-  /* Initially translate out of view */
 }
 
 .slide.on {
   display: flex;
   transform: translateX(0%);
-  /* Slide in from left */
 }
 
 .slide.off {
   transform: translateX(100%);
-  /* Slide out to right */
 }
 
 .slide-img {
@@ -477,6 +473,19 @@ button.order-now-btn:hover {
   border-color: #84C992;
 }
 
+#sideMenu a {
+  color: #000000;
+  text-decoration: none; 
+}
+
+#sideMenu a:visited {
+  color: #000000; 
+}
+
+
+#sideMenu a:active {
+  color: #000000; 
+}
 
 #sideMenu p {
   font-size: 14px;
@@ -500,22 +509,19 @@ button.order-now-btn:hover {
 img[src="../image/owl peaking.png"] {
   position: absolute;
   bottom: 0;
-  /* Adjust as necessary */
   top: 40vw;
   left: 0;
-  /* Adjust as necessary */
   width: 10vw;
-  /* Adjust size as needed */
   height: auto;
   margin: 0vw;
 }
 
 img[src="../image/owl i mage reverse.png"]{
   position: absolute;
-  bottom: 0; /* Adjust as necessary */
+  bottom: 0; 
   top: 59.7vw;
-  right: 0; /* Adjust as necessary */
-  width: 14vw; /* Adjust size as needed */
+  right: 0; 
+  width: 14vw; 
   height: auto;
   margin: 0vw;
 }

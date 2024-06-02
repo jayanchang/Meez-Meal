@@ -53,7 +53,7 @@ header {
     width: 80%;
     max-width: 50vw;
     border-radius: 10px;
-    margin-top: 2vw; /* Reduced margin to decrease the gap */
+    margin-top: 2vw; 
 
 
 }
@@ -69,7 +69,7 @@ header {
     padding: 0 5%;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.5; /* Increased line spacing */
+    line-height: 1.5; 
     margin-top: 1vw;
 }
 
@@ -176,17 +176,17 @@ button.order-now-btn:hover {
     display: none;
     flex-wrap: nowrap;
     justify-content: space-between;
-    transition: transform 2s ease-in; /* Add transition for smooth effect */
-    transform: translateX(-100%); /* Initially translate out of view */
+    transition: transform 2s ease-in; /
+    transform: translateX(-100%); 
 }
 
 .slide.on {
     display: flex;
-    transform: translateX(0%); /* Slide in from left */
+    transform: translateX(0%); 
 }
   
 .slide.off {
-    transform: translateX(100%); /* Slide out to right */
+    transform: translateX(100%); 
 }
   
 .slide-img {
@@ -243,7 +243,7 @@ button.order-now-btn:hover {
 
 
 #searchInput {
-    flex-grow: 1; /* Allows the input to expand and fill the space */
+    flex-grow: 1; 
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -356,6 +356,21 @@ button.order-now-btn:hover {
   border-color: #84C992;
 }
 
+#sideMenu a {
+    color: #000000;
+    text-decoration: none; 
+}
+
+#sideMenu a:visited {
+    color: #000000; 
+}
+
+
+#sideMenu a:active {
+    color: #000000; 
+}
+
+
 
 #sideMenu p{
   font-size: 20px;
@@ -370,27 +385,27 @@ button.order-now-btn:hover {
 }
 
 #sideMenu p:hover{
-  border-bottom: 2px solid rgb(58, 58, 58);
+    font-weight: bold;
 
 }
 
 
 img[src="../image/owl peaking.png"]{
     position: absolute;
-    bottom: 0; /* Adjust as necessary */
-    top: 30vw;
-    left: 0; /* Adjust as necessary */
-    width: 10vw; /* Adjust size as needed */
+    bottom: 0; 
+    top: 10vw;
+    left: 0; 
+    width: 10vw; 
     height: auto;
     margin: 0vw;
   }
 
 img[src="../image/owl i mage reverse.png"]{
     position: absolute;
-    bottom: 0; /* Adjust as necessary */
-    top: 59.7vw;
-    right: 0; /* Adjust as necessary */
-    width: 14vw; /* Adjust size as needed */
+    bottom: 0; 
+    top: 30vw;
+    right: 0; 
+    width: 17vw;
     height: auto;
     margin: 0vw;
 }
@@ -424,3 +439,34 @@ img[src="../image/owl i mage reverse.png"]{
 #Hotline{
     line-height: normal;
 }
+
+#filterSidebar {
+    height: 100%;
+    width: 100%; 
+    top: 0;
+    right: 0; 
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    visibility: hidden; 
+    z-index: 10;
+    transition: width 0.5s; 
+  }
+  
+  
+.filter-options {
+    height: 100%;
+    width: 20%; 
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    right: 0;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+    padding-top: 3vw;
+    padding: 2vw;
+    border-top: 3.875rem;
+    border-style: solid;
+    border-color: #84C992;
+    transition: ease-out;
+  }
+  

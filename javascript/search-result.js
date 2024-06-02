@@ -1,109 +1,99 @@
-//Display results from search
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to get URL parameters
-    function getQueryParam(param) {
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
+//Result from search
+document.addEventListener("DOMContentLoaded", function () {
+
+    function resultDisplay(param) {
+        var keywordMeal = window.location.search;
+        var urlParams = new URLSearchParams(keywordMeal);
         return urlParams.get(param);
     }
 
-    var searchQuery = decodeURIComponent(getQueryParam('q'));
-    document.getElementById('searchResultsTitle').textContent += '"' + searchQuery + '"';
+    let searchQuery = decodeURIComponent(resultDisplay('q'));
+    document.getElementById('resultName').textContent += '"' + searchQuery + '"';
 
-    document.getElementById('resultsContainer').innerHTML = '<p>Simulated search results for "' + searchQuery + '"</p>';
+
 });
-
-
 
 
 //Filter function
-document.addEventListener("DOMContentLoaded", function() {
-    function filterResult(filterType) {
-        const filterContainer = document.getElementById('resultsContainer');
-        filterContainer.innerHTML = ''; // Clear existing results
+document.addEventListener("DOMContentLoaded", function () {
+    function filterFunction(Type) {
 
-        // Simulate fetching data based on filter
-        const filteredResults = getFilteredResults(filterType);
+        let typeResults = getFilteredResults(Type);
 
-        // Append results as images
-        filteredResults.forEach(meal => {
-            const imgElement = document.createElement('img');
-            imgElement.alt = meal.name;
-            imgElement.src = meal.imageUrl;
-            imgElement.classList.add('result-item');
-
-            filterContainer.appendChild(imgElement);
+        typeResults.forEach(meal => {
+            let foodIMG = document.createElement('img');
+            foodIMG.src = meal.imageUrl;
+            foodIMG.alt = meal.name;
+            filterContainer.appendChild(foodIMG);
         });
     }
 
-
-
-    document.getElementById('filterNew').addEventListener('click', () => filterResult('new'));
-    document.getElementById('filterPopular').addEventListener('click', () => filterResult('popular'));
-    document.getElementById('filterRating').addEventListener('click', () => filterResult('rating'));
 });
 
 
-// Adding event listeners to checkboxes to filter images
-document.querySelectorAll('input[name="filter"]').forEach(filterCheckbox => {
-    filterCheckbox.addEventListener('change', function() {
+document.querySelectorAll('input[name="filter"]').forEach(optionBtn => {
+    optionBtn.addEventListener('change', function () {
 
-        let images = document.querySelectorAll('.meal');
+        let mealinput = document.querySelectorAll('input[name="filter"]:checked');
+        let mealPhotos = document.querySelectorAll('.meal');
+        let mealarray = Array.from(mealinput);
+        let filteredMeals = mealarray.map(input => input.value);
 
-        let checkedTags = Array.from(document.querySelectorAll('input[name="filter"]:checked')).map(input => input.value);
-        
-
-        
-        images.forEach(img => {
-            // Get the tags from data attribute
+        mealPhotos.forEach(img => {
             let tags = img.getAttribute('data-tags').split(' ');
-            
-            // Determine if this image should be displayed based on checked tags
-            if (checkedTags.every(tag => tags.includes(tag)) || checkedTags.length === 0) {
-                img.style.display = ''; // Show the image if all checked tags are in the image's tags
-            } else {
-                img.style.display = 'none'; // Hide the image if not all checked tags are in the image's tags
+
+            if ( filteredMeals.length === 0) {
+                img.style.display = ''; 
+
+            } else if (filteredMeals.every(function(tag) { return tags.includes(tag); })) {
+                img.style.display = '';
+
+            }else {
+                img.style.display = 'none'; 
             }
         });
     });
 });
 
-// Event listener to open the filter sidebar
+// Filter side panel
 document.getElementById('filterIcon').addEventListener('click', function() {
-    var sidebar = document.getElementById('filterSidebar');
-    sidebar.style.visibility = 'visible';
-    sidebar.style.width = '249px';
-
+    var sidebar = document.getElementById("filterSidebar");
+    sidebar.style.visibility = "visible";
+    sidebar.style.width = "100vw"; 
+    sidebar.style.transition = "ease-in";
 });
 
-// Function to close the filter sidebar
-function closeNav() {
-    var sidebar = document.getElementById('filterSidebar');
-    sidebar.style.visibility = 'hidden';
-    sidebar.style.width = '0';
+document.getElementById('filterSidebar').addEventListener("click", function(event) {
+    if (event.target === event.currentTarget) { 
+        var sidebar = document.getElementById("filterSidebar");
+        sidebar.style.visibility = "hidden";
+        sidebar.style.width = "0";
+        sidebar.style.transition = "ease-out";
+    }
+});
 
-}
 
 
-// Event listeners for search-related functionality
-document.getElementById("search").addEventListener("keyup", function(event) {
+
+//Search Function
+document.getElementById("search").addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
         document.getElementById("searchBtn").click();
     }
 });
 
-document.getElementById("searchBtn").addEventListener("click", function() {
-    var searchQuery = encodeURIComponent(document.getElementById('searchInput').value);
+document.getElementById("searchBtn").addEventListener("click", function () {
+    let searchQuery = encodeURIComponent(document.getElementById('searchInput').value);
 
     document.location.href = "/search-results.html?q=" + searchQuery;
 });
 
-document.getElementById("triggerSearch").addEventListener("click", function(e) {
+document.getElementById("triggerSearch").addEventListener("click", function (e) {
     document.getElementById("searchPanel").style.visibility = "visible";
 });
 
-document.getElementById("searchPanel").addEventListener("click", function(e) {
+document.getElementById("searchPanel").addEventListener("click", function (e) {
     if (e.target.closest("div").getAttribute('id') == "searchPanel") {
         document.getElementById("searchPanel").style.visibility = "hidden";
     }

@@ -9,23 +9,27 @@
     <title>Meez Meal Menu Page</title>
 </head>
 
+<!--Header Bar-->
+<header>
+    <div class="left-logos">
+        <img class="logo" src="../image/Sidebar - Desktop.png" id="triggerSidePanel" alt="header logo Sidebar">
+    </div>
+    <img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo">
+    <div class="right-logos">
+        <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
+        <img src="../image/cart.png" alt="header logo cart">
+        <img src="../image/profile.png" alt="header logo profile">
+    </div>
+</header>
+
 <body>
-    <header>
-        <div class="left-logos">
-            <img class="logo" src="../image/Sidebar - Desktop.png" id="triggerSidePanel" alt="header logo Sidebar">
-        </div>
-        <img class="logo" src="../image/MeezMealsLogo-white-owl 1.png" alt="Meez Meal Logo">
-        <div class="right-logos">
-            <img src="../image/search.png" alt="Search Icon" id="triggerSearch">
-            <img src="../image/cart.png" alt="header logo cart">
-            <img src="../image/profile.png" alt="header logo profile">
-        </div>
-    </header>
+
 
     <div class="daily-menu-div">
         <h1 class="menu-h1">Daily Menu</h1>
     </div>
 
+    <!--First Carousel-->
     <div class="carousel">
         <div class="carousel-inner">
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
@@ -37,6 +41,7 @@
                     <p class="description-menu">Indulge in the creamy, earthy flavors of our Mushroom Cream Risotto, a
                         comforting classic that's perfect for any occasion. Each spoonful offers a luxurious blend of
                         tender Arborio rice, enriched with a hearty mix...</p>
+                        <a href="../html pages/product-2.html"><p>Click here to order</p></a>
                 </div>
             </div>
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
@@ -47,6 +52,7 @@
                     <p class="description-menu">Dive into the bold flavors of our Spicy Pork with Rice, a dish that
                         promises to satisfy your cravings for heat and flavor. Tender slices of pork are marinated in a
                         fiery blend of spices and seared to perfection...</p>
+                        <a href="../html pages/product-1.html"><p>Click here to order</p></a>
                 </div>
             </div>
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
@@ -74,6 +80,7 @@
         </div>
     </div>
 
+    <!--Second Carousel-->
     <div class="for-children-div">
         <h2 style="margin-left: 10vw;">Most Popular Menu</h2>
         <div class="slideshow-container">
@@ -87,11 +94,11 @@
                 <img src="../image/coconut curry tag.png" alt="coconut curry" class="slide-img">
                 <img src="../image/risoni tag.png" alt="Steak" class="slide-img">
             </div>
-            <button class="prev-2" onclick="nextSlide(-1)">◀</button>
-            <button class="next-2" onclick="nextSlide(1)">▶</button>
+
         </div>
     </div>
 
+    <!--Third Carousel-->
     <div class="for-all-family-div">
         <h2>For All Family</h2>
         <div class="container-buttom-carousel">
@@ -118,6 +125,7 @@
         </div>
     </div>
 
+    <!--Footer-->
     <footer>
         <div class="footer-container">
             <div class="column" id="about-us">
@@ -178,7 +186,9 @@
         <div id="sideMenu">
             <div>
                 <p>Login</p>
-                <p>Menu</p>
+                <a href="../html pages/menu.html">
+                    <p>Menu</p>
+                </a>
                 <p>About Us</p>
                 <p>Contact</p>
             </div>
