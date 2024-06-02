@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     function resultDisplay(param) {
-        var keywordMeal = window.location.search;
+        let keywordMeal = window.location.search;
         var urlParams = new URLSearchParams(keywordMeal);
         return urlParams.get(param);
     }

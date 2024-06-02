@@ -25,62 +25,58 @@ function toggleAccordion(content, button) {
 }
 
 
-let slides = document.getElementsByClassName("slide");
-let slidesLength = slides.length;
+let imagedisplay = document.getElementsByClassName("slide");
+let length = imagedisplay.length;
 let imageIndex = 0;
 
 // Carousel Sliders
 function Carousel() {
 
 
-    // Mark all slides as inactive
-
-
-    for (let i = 0; i < slidesLength; i++) {
-        slides[i].classList.remove('on');
-        slides[i].classList.add('off');
+    for (let i = 0; i < length; i++) {
+        imagedisplay[i].classList.remove('on');
+        imagedisplay[i].classList.add('off');
 
     }
 
-    // Increment slide index or reset if at the end
     imageIndex++;
-    if (imageIndex > slidesLength) {
+    if (imageIndex > length) {
         imageIndex = 1;
     }
 
-    // Activate the new slide
-    slides[imageIndex - 1].classList.add('on');
-    slides[imageIndex - 1].classList.remove('off');
+ 
+    imagedisplay[imageIndex - 1].classList.add('on');
+    imagedisplay[imageIndex - 1].classList.remove('off');
 
-    // Set a timeout to automatically cycle slides
+ 
     setTimeout(Carousel, 1300);
 }
 
 function moveSLide(n) {
 
 
-    slides[imageIndex - 1].classList.add('off');
-    slides[imageIndex - 1].classList.remove('on');
+    imagedisplay[imageIndex - 1].classList.add('off');
+    imagedisplay[imageIndex - 1].classList.remove('on');
 
 
 
     imageIndex = imageIndex + n;
-    if (slidesLength < imageIndex) {
+    if (length < imageIndex) {
         imageIndex = 1;
     }
     if (1 > imageIndex) {
-        imageIndex = slidesLength;
+        imageIndex = length;
     }
 
+    imagedisplay[imageIndex - 1].classList.add('on');
+    imagedisplay[imageIndex - 1].classList.remove('off');
 
-    slides[imageIndex - 1].classList.remove('off');
-    slides[imageIndex - 1].classList.add('on');
 
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    slides[0].classList.add('on'); 
+    imagedisplay[0].classList.add('on'); 
     setTimeout(Carousel, 1300); 
 });
 
