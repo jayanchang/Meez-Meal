@@ -176,7 +176,7 @@ button.order-now-btn:hover {
     display: none;
     flex-wrap: nowrap;
     justify-content: space-between;
-    transition: transform 2s ease-in; /
+    transition: transform 2s ease-in;
     transform: translateX(-100%); 
 }
 
