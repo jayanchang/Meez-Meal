@@ -1,51 +1,51 @@
 let imageIndex = 0;
 let slides = document.getElementsByClassName("slide");
-let slidesLength = slides.length;
+let slidesLength = imagegallery.length;
 
 // Carousel Function
 function Carousel() {
 
-    for (let i = 0; i < slidesLength; i++) {
-        slides[i].classList.remove('on');
-        slides[i].classList.add('off');
+    for (let i = 0; i < gallerylen; i++) {
+        imagegallery[i].classList.remove('on');
+        imagegallery[i].classList.add('off');
 
     }
 
 
     imageIndex++;
-    if (imageIndex > slidesLength) {
+    if (imageIndex > gallerylen) {
         imageIndex = 1;
     }
 
-    slides[imageIndex - 1].classList.add('on');
-    slides[imageIndex - 1].classList.remove('off');
+    imagegallery[imageIndex - 1].classList.add('on');
+    imagegallery[imageIndex - 1].classList.remove('off');
 
     setTimeout(Carousel, 1300);
 }
 
 function nextSlide(i) {
 
-    slides[imageIndex - 1].classList.add('off');
-    slides[imageIndex - 1].classList.remove('on');
+    imagegallery[imageIndex - 1].classList.add('off');
+    imagegallery[imageIndex - 1].classList.remove('on');
 
 
 
     imageIndex = imageIndex + i;
-    if (slidesLength < imageIndex) {
+    if (gallerylen < imageIndex) {
         imageIndex = 1;
     }
     if (1 > imageIndex) {
-        imageIndex = slidesLength;
+        imageIndex = gallerylen;
     }
     
-    slides[imageIndex - 1].classList.remove('off');
-    slides[imageIndex - 1].classList.add('on');
+    imagegallery[imageIndex - 1].classList.remove('off');
+    imagegallery[imageIndex - 1].classList.add('on');
 
 }
 
 // Initialize first slide and start the slideshow
 document.addEventListener("DOMContentLoaded", function() {
-    slides[0].classList.add('on'); 
+    imagegallery[0].classList.add('on'); 
     setTimeout(Carousel, 1300); 
 });
 

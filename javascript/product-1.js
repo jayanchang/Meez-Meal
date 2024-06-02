@@ -25,60 +25,58 @@ function toggleAccordion(content, button) {
 }
 
 
-let imagedisplay = document.getElementsByClassName("slide");
-let length = imagedisplay.length;
 let imageIndex = 0;
+let imagegallery = document.getElementsByClassName("slide");
+let gallerylen = imagegallery.length;
 
-// Carousel Sliders
+// Carousel Function
 function Carousel() {
 
-
-    for (let i = 0; i < length; i++) {
-        imagedisplay[i].classList.remove('on');
-        imagedisplay[i].classList.add('off');
+    for (let i = 0; i < gallerylen; i++) {
+        imagegallery[i].classList.remove('on');
+        imagegallery[i].classList.add('off');
 
     }
 
+
     imageIndex++;
-    if (imageIndex > length) {
+    if (imageIndex > gallerylen) {
         imageIndex = 1;
     }
 
- 
-    imagedisplay[imageIndex - 1].classList.add('on');
-    imagedisplay[imageIndex - 1].classList.remove('off');
+    imagegallery[imageIndex - 1].classList.add('on');
+    imagegallery[imageIndex - 1].classList.remove('off');
 
- 
     setTimeout(Carousel, 1300);
 }
 
-function moveSLide(n) {
+function nextSlide(i) {
+
+    imagegallery[imageIndex - 1].classList.add('off');
+    imagegallery[imageIndex - 1].classList.remove('on');
 
 
-    imagedisplay[imageIndex - 1].classList.add('off');
-    imagedisplay[imageIndex - 1].classList.remove('on');
 
-
-
-    imageIndex = imageIndex + n;
-    if (length < imageIndex) {
+    imageIndex = imageIndex + i;
+    if (gallerylen < imageIndex) {
         imageIndex = 1;
     }
     if (1 > imageIndex) {
-        imageIndex = length;
+        imageIndex = gallerylen;
     }
-
-    imagedisplay[imageIndex - 1].classList.add('on');
-    imagedisplay[imageIndex - 1].classList.remove('off');
-
+    
+    imagegallery[imageIndex - 1].classList.remove('off');
+    imagegallery[imageIndex - 1].classList.add('on');
 
 }
 
-
+// Initialize first slide and start the slideshow
 document.addEventListener("DOMContentLoaded", function() {
-    imagedisplay[0].classList.add('on'); 
+    imagegallery[0].classList.add('on'); 
     setTimeout(Carousel, 1300); 
 });
+
+
 
 
 
