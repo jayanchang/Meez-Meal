@@ -1,6 +1,6 @@
 let imageIndex = 0;
 let slides = document.getElementsByClassName("slide");
-let CarouselLength = slides.length;
+let gallerylen = slides.length;
 
 // Carousel Function
 function Carousel() {
