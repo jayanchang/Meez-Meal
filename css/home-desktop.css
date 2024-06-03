@@ -123,6 +123,10 @@ header {
 .promo {
     background-color: #332225;
     text-align: center;
+    
+    position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
 .promo h2 {
@@ -164,6 +168,15 @@ header {
 
 .try-now:hover {
     background-color: #3FAB53;
+}
+
+#home-page-owl {
+    position: absolute;
+    bottom: -30%;
+    left: 20%;
+    z-index: 4;
+    width: 20%;
+    height: 75%;
 }
 
 /* WHY US? SECTION */
@@ -641,27 +654,6 @@ header {
       font-weight: bold;
   
   }
-  
-  
-  img[src="../image/owl peaking.png"]{
-      position: absolute;
-      bottom: 0; 
-      top: 10vw;
-      left: 0; 
-      width: 10vw; 
-      height: auto;
-      margin: 0vw;
-    }
-  
-  img[src="../image/owl i mage reverse.png"]{
-      position: absolute;
-      bottom: 0; 
-      top: 30vw;
-      right: 0; 
-      width: 17vw;
-      height: auto;
-      margin: 0vw;
-  }  
 
 /* FOOTER */
 
