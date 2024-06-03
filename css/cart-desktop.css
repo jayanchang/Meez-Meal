@@ -24,23 +24,25 @@ header {
 
 .logo {
     text-align: center;
-    margin-left: 30%;
 }
 
 .right-logos {
     display: flex;
     align-items: center;
+
 }
 
 .right-logos img {
     max-width: 50%;
     max-height: 50%;
     margin: 1vw;
+
 }
 
 .left-logos {
     display: flex;
     align-items: center;
+
 }
 
 .left-logos img {
