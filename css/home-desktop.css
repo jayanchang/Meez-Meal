@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body,
@@ -596,6 +595,14 @@ header {
     border-radius: 15px;
     color: #000000;
     padding: 0.5vw;
+}
+
+.search-history-content p:hover{
+  margin: 0.5vw;
+  background-color: #bfbfbf;
+  border-radius: 15px;
+  color: #000000;
+  padding: 0.5vw;
 }
 
 /* Side Menu Panel*/
