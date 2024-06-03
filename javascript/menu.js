@@ -1,13 +1,13 @@
 let imageIndex = 0;
 let slides = document.getElementsByClassName("slide");
-let slidesLength = imagegallery.length;
+let CarouselLength = slides.length;
 
 // Carousel Function
 function Carousel() {
 
     for (let i = 0; i < gallerylen; i++) {
-        imagegallery[i].classList.remove('on');
-        imagegallery[i].classList.add('off');
+        slides[i].classList.remove('on');
+        slides[i].classList.add('off');
 
     }
 
@@ -17,16 +17,16 @@ function Carousel() {
         imageIndex = 1;
     }
 
-    imagegallery[imageIndex - 1].classList.add('on');
-    imagegallery[imageIndex - 1].classList.remove('off');
+    slides[imageIndex - 1].classList.add('on');
+    slides[imageIndex - 1].classList.remove('off');
 
     setTimeout(Carousel, 1300);
 }
 
 function nextSlide(i) {
 
-    imagegallery[imageIndex - 1].classList.add('off');
-    imagegallery[imageIndex - 1].classList.remove('on');
+    slides[imageIndex - 1].classList.add('off');
+    slides[imageIndex - 1].classList.remove('on');
 
 
 
@@ -38,14 +38,13 @@ function nextSlide(i) {
         imageIndex = gallerylen;
     }
     
-    imagegallery[imageIndex - 1].classList.remove('off');
-    imagegallery[imageIndex - 1].classList.add('on');
+    slides[imageIndex - 1].classList.remove('off');
+    slides[imageIndex - 1].classList.add('on');
 
 }
 
-// Initialize first slide and start the slideshow
 document.addEventListener("DOMContentLoaded", function() {
-    imagegallery[0].classList.add('on'); 
+    slides[0].classList.add('on'); 
     setTimeout(Carousel, 1300); 
 });
 
