@@ -377,19 +377,19 @@ body {
 }
 
 .container-buttom-carousel>div:nth-of-type(1) {
-  background: url("../image/bulgogi.png")  50%/cover;
+  background: url("image/bulgogi.png")  50%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(2) {
-  background: url("../image/spaghetti.png")  50%/cover;
+  background: url("image/spaghetti.png")  50%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(3) {
-  background: url("../image/risotto.png")  50%/cover;
+  background: url("image/risotto.png")  50%/cover;
 }
 
 .container-buttom-carousel>div:nth-of-type(4) {
-  background: url("../image/chicken\ tago\ copy.jpg")  50%/cover;
+  background: url("image/chicken\ tago\ copy.jpg")  50%/cover;
 }
 
 .container-buttom-carousel>div .content-carousel {

@@ -396,7 +396,7 @@ button.order-now-btn:hover {
 }
 
 
-img[src="../image/owl peaking.png"]{
+img[src="image/owl peaking.png"]{
     position: absolute;
     bottom: 0; 
     top: 10vw;
@@ -406,7 +406,7 @@ img[src="../image/owl peaking.png"]{
     margin: 0vw;
   }
 
-img[src="../image/owl i mage reverse.png"]{
+img[src="image/owl i mage reverse.png"]{
     position: absolute;
     bottom: 0; 
     top: 30vw;
