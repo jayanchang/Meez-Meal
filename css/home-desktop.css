@@ -290,7 +290,7 @@ header {
     margin: 1rem;
     position: relative;
     overflow: hidden;
-    padding-right: 10%;
+    padding-right: 22%;
 }
 
 .carousel {
@@ -449,7 +449,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin-right: 10VW;
-    margin-left: 10VW;
+    margin-left: 5VW;
 }
 
 .review {

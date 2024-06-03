@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+body,
+button {
+    font-family: "Inter", sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -11,6 +16,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
 
 /* Header Styles */
 header {
@@ -411,7 +417,9 @@ img[src="../image/owl i mage reverse.png"]{
 }
 
 
-.footer-container{
+/* FOOTER */
+
+.footer-container {
     background-color: #84C992;
     display: flex;
     flex-wrap: wrap;
@@ -420,24 +428,90 @@ img[src="../image/owl i mage reverse.png"]{
     padding: 0 20px;
 }
 
-.column{
+.column {
     flex: 1;
     margin: 0.5rem;
     min-width: 200px;
     padding: 1rem;
 }
 
-.column h3{
+.column h3 {
     margin-bottom: 10px;
     line-height: 2rem;
 }
 
-.column p{
+.column p {
     line-height: 2rem;
 }
 
-#Hotline{
+.column a {
+    text-decoration: none;
+    color: black;
+}
+
+#Hotline {
     line-height: normal;
+}
+
+.social-media {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: left;
+}
+
+#filterSidebar {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    visibility: hidden;
+    z-index: 10;
+    transition: width 0.5s;
+}
+
+
+.filter-options {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    right: 0;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+    padding-top: 3vw;
+    padding: 2vw;
+    border-top: 3.875rem;
+    border-style: solid;
+    border-color: #84C992;
+    transition: ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .column {
+        margin: 10px 0;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+
+.copyright {
+    background-color: #332225;
+    color: white;
+    text-align: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 #filterSidebar {
